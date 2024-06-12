@@ -1,0 +1,10 @@
+{
+  "magnetic_circuit": {
+    "sounds": [
+      {
+        "name": "acollectives:magnetic_circuit",
+        "stream": true
+      }
+    ]
+  }
+}

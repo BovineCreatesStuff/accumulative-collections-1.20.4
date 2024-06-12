@@ -1,0 +1,28 @@
+{
+  "item.acollectives.cocoa_butter": "Cocoa Butter",
+  "item.acollectives.white_chocolate": "White Chocolate",
+  "item.acollectives.milk_chocolate": "Milk Chocolate",
+  "item.acollectives.cheese": "Cheese",
+  "item.acollectives.mooshroom_burger": "Mooshroom Burger",
+  "item.acollectives.raw_lead": "Raw Lead",
+  "item.acollectives.lead_ingot": "Lead Ingot",
+  "item.acollectives.ruby": "Ruby",
+  "item.acollectives.copper_key": "Copper Key",
+  "item.acollectives.iron_key": "Iron Key",
+  "item.acollectives.gold_key": "Gold Key",
+  "item.acollectives.crate_key": "Steve Co. Supply Crate Key",
+  "item.acollectives.studded_helmet": "Studded Helmet",
+  "item.acollectives.studded_chestplate": "Studded Chestplate",
+  "item.acollectives.studded_leggings": "Studded Leggings",
+  "item.acollectives.studded_boots": "Studded Boots",
+  "item.acollectives.music_disc_magnetic_circuit": "Music Disc",
+  "item.acollectives.music_disc_magnetic_circuit.desc": "Markus 'Notch' Persson - Magnetic Circuit",
+
+  "block.acollectives.ancient_planks": "Ancient Planks",
+  "block.acollectives.ruby_ore": "Ruby Ore",
+  "block.acollectives.lead_ore": "Lead Ore",
+  "block.acollectives.ruby_block": "Block of Ruby",
+  "block.acollectives.lead_block": "Block of Lead",
+
+  "itemgroup.acollectives": "Accumulative Collections"
+}
