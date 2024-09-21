@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column_horizontal",
+  "textures": {
+    "end": "acollectives:block/ancient_log_top",
+    "side": "acollectives:block/ancient_log"
+  }
+}

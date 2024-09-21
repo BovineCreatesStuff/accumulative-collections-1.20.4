@@ -1,10 +1,58 @@
 {
-  "magnetic_circuit": {
+  "alpha": {
     "sounds": [
       {
-        "name": "acollectives:magnetic_circuit",
+        "name": "acollectives:alpha",
         "stream": true
       }
     ]
+  },
+  "dog": {
+    "sounds": [
+      {
+        "name": "acollectives:dog",
+        "stream": true
+      }
+    ]
+  },
+  "droopy": {
+    "sounds": [
+      {
+        "name": "acollectives:droopy",
+        "stream": true
+      },
+    ]
   }
+  "eleven": {
+      "sounds": [
+        {
+          "name": "acollectives:eleven",
+          "stream": true
+        }
+      ]
+    },
+    "foolin": {
+      "sounds": [
+        {
+          "name": "acollectives:foolin",
+          "stream": true
+        }
+      ]
+    },
+    "intro": {
+      "sounds": [
+        {
+          "name": "acollectives:intro",
+          "stream": true
+        }
+      ]
+    },
+    "magnetic_circuit": {
+      "sounds": [
+        {
+          "name": "acollectives:magnetic_circuit",
+          "stream": true
+        }
+      ]
+    },
 }

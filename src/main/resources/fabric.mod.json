@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "acolectives",
+	"id": "acollectives",
 	"version": "${version}",
 	"name": "Accumulative Collections",
 	"description": "This mod adds too much stuff to list! Not meant to be a direct upgrade of Minecraft.",
@@ -12,21 +12,21 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/acolectives/icon.png",
+	"icon": "assets/acollectives/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.bovine.acolectives.AccumulativeCollections"
+			"net.bovine.acollectives.AccumulativeCollections"
 		],
 		"client": [
-			"net.bovine.acolectives.AccumulativeCollectionsClient"
+			"net.bovine.acollectives.AccumulativeCollectionsClient"
 		],
 		"fabric-datagen": [
-			"net.bovine.acolectives.AccumulativeCollectionsDataGenerator"
+			"net.bovine.acollectives.AccumulativeCollectionsDataGenerator"
 		]
 	},
 	"mixins": [
-		"acolectives.mixins.json"
+		"acollectives.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.15.11",

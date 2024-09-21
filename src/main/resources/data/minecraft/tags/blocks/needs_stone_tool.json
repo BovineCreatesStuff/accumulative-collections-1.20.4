@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "acollectives:lead_ore"
+    "acollectives:lead_ore",
+    "acollectives:deepslate_lead_ore"
   ]
 }
