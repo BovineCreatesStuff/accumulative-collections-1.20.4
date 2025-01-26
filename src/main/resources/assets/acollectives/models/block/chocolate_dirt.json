@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "acollectives:block/chocolate_dirt_top",
+    "side": "acollectives:block/chocolate_dirt_side"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "acollectives:block/vanilla_dirt_top",
+    "side": "acollectives:block/vanilla_dirt_side"
+  }
+}

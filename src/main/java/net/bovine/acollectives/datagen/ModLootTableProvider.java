@@ -4,6 +4,7 @@ import net.bovine.acollectives.block.ModBlocks;
 import net.bovine.acollectives.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.block.Blocks;
 
 public class ModLootTableProvider extends FabricBlockLootTableProvider {
     public ModLootTableProvider(FabricDataOutput dataOutput) {
@@ -12,10 +13,59 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
+        addDrop(ModBlocks.ANCIENT_LOG);
+        addDrop(ModBlocks.ANCIENT_WOOD);
+        addDrop(ModBlocks.STRIPPED_ANCIENT_LOG);
+        addDrop(ModBlocks.STRIPPED_ANCIENT_WOOD);
+        addDrop(ModBlocks.ANCIENT_PLANKS);
         addDrop(ModBlocks.RUBY_BLOCK);
         addDrop(ModBlocks.LEAD_BLOCK);
+        addDrop(ModBlocks.SKYSTONE);
+        addDrop(ModBlocks.GLOWING_OBSIDIAN);
+
+        addDrop(ModBlocks.ANCIENT_LEAVES, leavesDrops(ModBlocks.ANCIENT_LEAVES, Blocks.SMOOTH_STONE_SLAB, 0.0025f)); //TODO
+
+        addDrop(ModBlocks.ANCIENT_STAIRS);
+        addDrop(ModBlocks.ANCIENT_SLAB, slabDrops(ModBlocks.ANCIENT_SLAB));
+        addDrop(ModBlocks.ANCIENT_BUTTON);
+        //addDrop(ModBlocks.ANCIENT_PRESSURE_PLATE);
+        addDrop(ModBlocks.ANCIENT_FENCE);
+        addDrop(ModBlocks.ANCIENT_FENCE_GATE);
+        addDrop(ModBlocks.ANCIENT_DOOR, doorDrops(ModBlocks.ANCIENT_DOOR));
+        addDrop(ModBlocks.ANCIENT_TRAPDOOR);
+
+        addDrop(ModBlocks.HAUNT_LOG);
+        addDrop(ModBlocks.HAUNT_WOOD);
+        addDrop(ModBlocks.STRIPPED_HAUNT_LOG);
+        addDrop(ModBlocks.STRIPPED_HAUNT_WOOD);
+        addDrop(ModBlocks.HAUNT_PLANKS);
+
+        addDrop(ModBlocks.HAUNT_STAIRS);
+        addDrop(ModBlocks.HAUNT_SLAB, slabDrops(ModBlocks.HAUNT_SLAB));
+        addDrop(ModBlocks.HAUNT_BUTTON);
+        //addDrop(ModBlocks.HAUNT_PRESSURE_PLATE);
+        addDrop(ModBlocks.HAUNT_FENCE);
+        addDrop(ModBlocks.HAUNT_FENCE_GATE);
+
+        addDrop(ModBlocks.CHOCOLATE_DIRT);
+        addDrop(ModBlocks.VANILLA_DIRT);
+        addDrop(ModBlocks.SUGAR_BRICKS);
+        addDrop(ModBlocks.SMOOTH_SUGAR_BRICKS);
+        addDrop(ModBlocks.PALE_SMOOTH_SUGAR_BRICKS);
+
+        addDrop(ModBlocks.RED_ROSE);
+        addDrop(ModBlocks.CYAN_ROSE);
+        addDrop(ModBlocks.WHITE_ROSE);
+        addDrop(ModBlocks.PINK_ROSE);
+        addDrop(ModBlocks.BLUE_ROSE);
+        addDrop(ModBlocks.GREEN_ROSE);
+        addDrop(ModBlocks.YELLOW_ROSE);
+        addDrop(ModBlocks.BUTTERCUP);
+        addDrop(ModBlocks.PINK_DAISY);
 
         addDrop(ModBlocks.RUBY_ORE, oreDrops(ModBlocks.RUBY_ORE, ModItems.RUBY));
         addDrop(ModBlocks.LEAD_ORE, oreDrops(ModBlocks.LEAD_ORE, ModItems.RAW_LEAD));
+        addDrop(ModBlocks.DEEPSLATE_RUBY_ORE, oreDrops(ModBlocks.DEEPSLATE_RUBY_ORE, ModItems.RUBY));
+        addDrop(ModBlocks.DEEPSLATE_LEAD_ORE, oreDrops(ModBlocks.DEEPSLATE_LEAD_ORE, ModItems.RAW_LEAD));
     }
 }

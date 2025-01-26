@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "acollectives:lead_ore",
-    "acollectives:ruby_ore",
-    "acollectives:lead_block",
-    "acollectives:ruby_block"
-  ]
-}

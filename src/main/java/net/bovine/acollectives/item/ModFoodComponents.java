@@ -13,4 +13,14 @@ public class ModFoodComponents {
             .build();
     public static final FoodComponent CHEESE = new FoodComponent.Builder().hunger(6).saturationModifier(.50f)
             .build();
+    public static final FoodComponent GOAT_CHEESE = new FoodComponent.Builder().hunger(7).saturationModifier(0.25f)
+            .build();
+    public static final FoodComponent CHEVON = new FoodComponent.Builder().hunger(3).saturationModifier(0.25f)
+            .build();
+    public static final FoodComponent COOKED_CHEVON = new FoodComponent.Builder().hunger(7).saturationModifier(0.50f)
+            .build();
+    public static final FoodComponent GRAY_COD = new FoodComponent.Builder().hunger(2).saturationModifier(0.25f)
+            .build();
+    public static final FoodComponent COOKED_GRAY_COD = new FoodComponent.Builder().hunger(5).saturationModifier(0.50f)
+            .build();
 }

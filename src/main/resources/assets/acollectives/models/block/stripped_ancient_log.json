@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_column",
-  "textures": {
-    "end": "acollectives:block/stripped_ancient_top",
-    "side": "acollectives:block/stripped_ancient_log"
-  }
-}

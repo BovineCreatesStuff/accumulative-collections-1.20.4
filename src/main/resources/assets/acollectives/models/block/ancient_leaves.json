@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "acollectives:block/ancient_leaves"
-  }
-}
