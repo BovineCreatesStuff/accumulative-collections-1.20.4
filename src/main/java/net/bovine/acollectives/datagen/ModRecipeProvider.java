@@ -48,6 +48,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.COCOA_BEANS), conditionsFromItem(Items.COCOA_BEANS))
                 .offerTo(exporter);
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.OLIVE_OIL_BUCKET, 1)
+                .input(ModItems.OLIVE)
+                .input(ModItems.OLIVE)
+                .input(ModItems.OLIVE)
+                .input(Items.BUCKET)
+                .criterion(hasItem(ModItems.OLIVE), conditionsFromItem(ModItems.OLIVE))
+                .offerTo(exporter);
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CHEESE, 2)
                 .input(Items.MILK_BUCKET)
                 .criterion(hasItem(Items.MILK_BUCKET), conditionsFromItem(Items.MILK_BUCKET))
@@ -64,7 +72,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.WHITE_CHOCOLATE, 4)
                 .input(ModItems.COCOA_BUTTER)
                 .input(Items.COCOA_BEANS)
-                .input(Items.MILK_BUCKET)
                 .input(Items.SUGAR)
                 .criterion(hasItem(ModItems.COCOA_BUTTER), conditionsFromItem(ModItems.COCOA_BUTTER))
                 .offerTo(exporter);
@@ -78,6 +85,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.RED_MUSHROOM), conditionsFromItem(Items.RED_MUSHROOM))
                 .offerTo(exporter);
 
+        /*
         ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, Items.RED_DYE, 1)
                 .input(ModBlocks.RED_ROSE.asItem())
                 .criterion(hasItem(ModBlocks.RED_ROSE.asItem()), conditionsFromItem(ModBlocks.RED_ROSE.asItem()))
@@ -157,6 +165,27 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModBlocks.LIGHT_BLUE_ROSE.asItem())
                 .criterion(hasItem(ModBlocks.LIGHT_BLUE_ROSE.asItem()), conditionsFromItem(ModBlocks.LIGHT_BLUE_ROSE.asItem()))
                 .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ANCIENT_PLANKS, 4)
+                .input(ModBlocks.ANCIENT_LOG.asItem())
+                .criterion(hasItem(ModBlocks.ANCIENT_LOG.asItem()), conditionsFromItem(ModBlocks.ANCIENT_LOG.asItem()))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ANCIENT_PLANKS, 4)
+                .input(ModBlocks.STRIPPED_ANCIENT_LOG.asItem())
+                .criterion(hasItem(ModBlocks.STRIPPED_ANCIENT_LOG.asItem()), conditionsFromItem(ModBlocks.STRIPPED_ANCIENT_LOG.asItem()))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ANCIENT_PLANKS, 4)
+                .input(ModBlocks.ANCIENT_WOOD.asItem())
+                .criterion(hasItem(ModBlocks.ANCIENT_WOOD.asItem()), conditionsFromItem(ModBlocks.ANCIENT_WOOD.asItem()))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ANCIENT_PLANKS, 4)
+                .input(ModBlocks.STRIPPED_ANCIENT_WOOD.asItem())
+                .criterion(hasItem(ModBlocks.STRIPPED_ANCIENT_WOOD.asItem()), conditionsFromItem(ModBlocks.STRIPPED_ANCIENT_WOOD.asItem()))
+                .offerTo(exporter);
+         */
 
         createStairsRecipe(ModBlocks.ANCIENT_STAIRS, Ingredient.ofItems(ModBlocks.ANCIENT_PLANKS.asItem()))
                 .criterion(hasItem(ModBlocks.ANCIENT_PLANKS.asItem()), conditionsFromItem(ModBlocks.ANCIENT_PLANKS.asItem())).offerTo(exporter);

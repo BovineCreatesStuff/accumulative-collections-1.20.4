@@ -12,7 +12,9 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
     STUDDED("studded", 10, new int[] {1, 4, 3, 2}, 13,
-            SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0f, 0.0f, () -> Ingredient.ofItems(Items.LEATHER));
+            SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0f, 0.0f, () -> Ingredient.ofItems(Items.LEATHER))
+    ,PLATE("plate", 400, new int[] {3, 7, 5, 3}, 9,
+            SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0f, 0.0f, () -> Ingredient.ofItems(Items.IRON_INGOT));
 
     private final String name;
     private final int durabilityMultiplier;

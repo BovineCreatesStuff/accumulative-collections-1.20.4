@@ -1,10 +1,13 @@
 package net.bovine.acollectives.datagen;
 
 import net.bovine.acollectives.block.ModBlocks;
+import net.bovine.acollectives.block.custom.BarleyCropBlock;
 import net.bovine.acollectives.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Blocks;
+import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
+import net.minecraft.predicate.StatePredicate;
 
 public class ModLootTableProvider extends FabricBlockLootTableProvider {
     public ModLootTableProvider(FabricDataOutput dataOutput) {
@@ -67,5 +70,15 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.LEAD_ORE, oreDrops(ModBlocks.LEAD_ORE, ModItems.RAW_LEAD));
         addDrop(ModBlocks.DEEPSLATE_RUBY_ORE, oreDrops(ModBlocks.DEEPSLATE_RUBY_ORE, ModItems.RUBY));
         addDrop(ModBlocks.DEEPSLATE_LEAD_ORE, oreDrops(ModBlocks.DEEPSLATE_LEAD_ORE, ModItems.RAW_LEAD));
+
+        BlockStatePropertyLootCondition.Builder builder = BlockStatePropertyLootCondition.builder(ModBlocks.BARLEY_CROP).properties(StatePredicate.Builder.create()
+                .exactMatch(BarleyCropBlock.AGE, 7));
+        addDrop(ModBlocks.BARLEY_CROP, cropDrops(ModBlocks.BARLEY_CROP, ModItems.BARLEY, ModItems.BARLEY_SEEDS, builder));
+
+        builder = BlockStatePropertyLootCondition.builder(ModBlocks.TEA_CROP).properties(StatePredicate.Builder.create()
+                .exactMatch(BarleyCropBlock.AGE, 7));
+        addDrop(ModBlocks.TEA_CROP, cropDrops(ModBlocks.TEA_CROP, ModItems.TEA_LEAF, ModItems.TEA_SEEDS, builder));
+
+
     }
 }

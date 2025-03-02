@@ -1,6 +1,7 @@
 package net.bovine.acollectives.datagen;
 
 import net.bovine.acollectives.block.ModBlocks;
+import net.bovine.acollectives.block.custom.BarleyCropBlock;
 import net.bovine.acollectives.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -30,6 +31,9 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SKYSTONE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GLOWING_OBSIDIAN);
 
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MAUSTONE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LURSTONE);
+
         blockStateModelGenerator.registerLog(ModBlocks.HAUNT_LOG).log(ModBlocks.HAUNT_LOG).wood(ModBlocks.HAUNT_WOOD);
         blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_HAUNT_LOG).log(ModBlocks.STRIPPED_HAUNT_LOG).wood(ModBlocks.STRIPPED_HAUNT_WOOD);
         BlockStateModelGenerator.BlockTexturePool hauntPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.HAUNT_PLANKS);
@@ -37,9 +41,14 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerLog(ModBlocks.PALM_LOG).log(ModBlocks.PALM_LOG).wood(ModBlocks.PALM_WOOD);
         BlockStateModelGenerator.BlockTexturePool palmPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.PALM_PLANKS);
 
+        blockStateModelGenerator.registerLog(ModBlocks.OLIVE_LOG).log(ModBlocks.OLIVE_LOG).wood(ModBlocks.OLIVE_WOOD);
+        BlockStateModelGenerator.BlockTexturePool olivePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.OLIVE_PLANKS);
+
         BlockStateModelGenerator.BlockTexturePool sugarBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SUGAR_BRICKS);
         BlockStateModelGenerator.BlockTexturePool smoothSugarBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SMOOTH_SUGAR_BRICKS);
         BlockStateModelGenerator.BlockTexturePool paleSmoothSugarBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.PALE_SMOOTH_SUGAR_BRICKS);
+
+        //ancientPool.family(ModBlocks.ANCIENT_FAMILY);
 
         ancientPool.stairs(ModBlocks.ANCIENT_STAIRS);
         ancientPool.slab(ModBlocks.ANCIENT_SLAB);
@@ -58,8 +67,15 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoor(ModBlocks.ANCIENT_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.ANCIENT_TRAPDOOR);
 
+        blockStateModelGenerator.registerDoor(ModBlocks.HAUNT_DOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.HAUNT_TRAPDOOR);
+
         //blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHOCOLATE_DIRT);
         //blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.VANILLA_DIRT);
+
+        blockStateModelGenerator.registerCrop(ModBlocks.BARLEY_CROP, BarleyCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7);
+
+        blockStateModelGenerator.registerCrop(ModBlocks.TEA_CROP, BarleyCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7);
 
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.RED_ROSE, ModBlocks.POTTED_RED_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.CYAN_ROSE, ModBlocks.POTTED_CYAN_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
@@ -80,7 +96,26 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GRAY_ROSE, ModBlocks.POTTED_GRAY_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.LIGHT_BLUE_ROSE, ModBlocks.POTTED_LIGHT_BLUE_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
 
+        blockStateModelGenerator.registerGlassPane(ModBlocks.LEADED_BLACK_STAINED_GLASS, ModBlocks.LEADED_BLACK_STAINED_GLASS_PANE);
+        blockStateModelGenerator.registerGlassPane(ModBlocks.LEADED_BLUE_STAINED_GLASS, ModBlocks.LEADED_BLUE_STAINED_GLASS_PANE);
+        blockStateModelGenerator.registerGlassPane(ModBlocks.LEADED_BROWN_STAINED_GLASS, ModBlocks.LEADED_BROWN_STAINED_GLASS_PANE);
+        blockStateModelGenerator.registerGlassPane(ModBlocks.LEADED_CYAN_STAINED_GLASS, ModBlocks.LEADED_CYAN_STAINED_GLASS_PANE);
+        blockStateModelGenerator.registerGlassPane(ModBlocks.LEADED_GRAY_STAINED_GLASS, ModBlocks.LEADED_GRAY_STAINED_GLASS_PANE);
+        blockStateModelGenerator.registerGlassPane(ModBlocks.LEADED_GREEN_STAINED_GLASS, ModBlocks.LEADED_GREEN_STAINED_GLASS_PANE);
+        blockStateModelGenerator.registerGlassPane(ModBlocks.LEADED_LIGHT_BLUE_STAINED_GLASS, ModBlocks.LEADED_LIGHT_BLUE_STAINED_GLASS_PANE);
+        blockStateModelGenerator.registerGlassPane(ModBlocks.LEADED_LIGHT_GRAY_STAINED_GLASS, ModBlocks.LEADED_LIGHT_GRAY_STAINED_GLASS_PANE);
+        blockStateModelGenerator.registerGlassPane(ModBlocks.LEADED_LIME_STAINED_GLASS, ModBlocks.LEADED_LIME_STAINED_GLASS_PANE);
+        blockStateModelGenerator.registerGlassPane(ModBlocks.LEADED_MAGENTA_STAINED_GLASS, ModBlocks.LEADED_MAGENTA_STAINED_GLASS_PANE);
+        blockStateModelGenerator.registerGlassPane(ModBlocks.LEADED_ORANGE_STAINED_GLASS, ModBlocks.LEADED_ORANGE_STAINED_GLASS_PANE);
+        blockStateModelGenerator.registerGlassPane(ModBlocks.LEADED_PINK_STAINED_GLASS, ModBlocks.LEADED_PINK_STAINED_GLASS_PANE);
+        blockStateModelGenerator.registerGlassPane(ModBlocks.LEADED_PURPLE_STAINED_GLASS, ModBlocks.LEADED_PURPLE_STAINED_GLASS_PANE);
+        blockStateModelGenerator.registerGlassPane(ModBlocks.LEADED_RED_STAINED_GLASS, ModBlocks.LEADED_RED_STAINED_GLASS_PANE);
+        blockStateModelGenerator.registerGlassPane(ModBlocks.LEADED_WHITE_STAINED_GLASS, ModBlocks.LEADED_WHITE_STAINED_GLASS_PANE);
+        blockStateModelGenerator.registerGlassPane(ModBlocks.LEADED_YELLOW_STAINED_GLASS, ModBlocks.LEADED_YELLOW_STAINED_GLASS_PANE);
+
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SUPPLY_CRATE);
+
+        //blockStateModelGenerator.registerTorch(ModBlocks.UNLIT_TORCH, ModBlocks.WALL_UNLIT_TORCH);
     }
 
     @Override
@@ -88,16 +123,23 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.RUBY, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_LEAD, Models.GENERATED);
         itemModelGenerator.register(ModItems.LEAD_INGOT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BARLEY, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TEA_LEAF, Models.GENERATED);
+        itemModelGenerator.register(ModItems.OLIVE, Models.GENERATED);
         itemModelGenerator.register(ModItems.COCOA_BUTTER, Models.GENERATED);
         itemModelGenerator.register(ModItems.WHITE_CHOCOLATE, Models.GENERATED);
         itemModelGenerator.register(ModItems.MILK_CHOCOLATE, Models.GENERATED);
         itemModelGenerator.register(ModItems.MOOSHROOM_BURGER, Models.GENERATED);
         itemModelGenerator.register(ModItems.CHEESE, Models.GENERATED);
         itemModelGenerator.register(ModItems.GOAT_CHEESE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.OLIVE_OIL_BUCKET, Models.GENERATED);
         itemModelGenerator.register(ModItems.CHEVON, Models.GENERATED);
         itemModelGenerator.register(ModItems.COOKED_CHEVON, Models.GENERATED);
         itemModelGenerator.register(ModItems.GRAY_COD, Models.GENERATED);
         itemModelGenerator.register(ModItems.COOKED_GRAY_COD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CALAMARI, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FRIED_CALAMARI, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GRAY_COD_BUCKET, Models.GENERATED);
         itemModelGenerator.register(ModItems.COPPER_KEY, Models.GENERATED);
         itemModelGenerator.register(ModItems.IRON_KEY, Models.GENERATED);
         itemModelGenerator.register(ModItems.GOLD_KEY, Models.GENERATED);
@@ -107,6 +149,10 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.STUDDED_CHESTPLATE));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.STUDDED_HELMET));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.STUDDED_LEGGINGS));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.PLATE_BOOTS));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.PLATE_CHESTPLATE));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.PLATE_HELMET));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.PLATE_LEGGINGS));
 
         itemModelGenerator.register(ModItems.WOODEN_BATTLEAXE, Models.GENERATED);
         itemModelGenerator.register(ModItems.STONE_BATTLEAXE, Models.GENERATED);
@@ -143,5 +189,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.FILLED_ENVELOPE, Models.GENERATED);
         itemModelGenerator.register(ModItems.CLOSED_ENVELOPE, Models.GENERATED);
         itemModelGenerator.register(ModItems.ORDER_FORM, Models.GENERATED);
+
+        //itemModelGenerator.register(ModItems.ANCIENT_HANGING_SIGN, Models.GENERATED);
     }
 }

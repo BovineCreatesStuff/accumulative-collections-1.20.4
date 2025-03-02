@@ -5,6 +5,8 @@ import net.bovine.acollectives.item.ModItemGroups;
 import net.bovine.acollectives.item.ModItems;
 import net.bovine.acollectives.painting.ModPaintings;
 import net.bovine.acollectives.sound.ModSounds;
+import net.bovine.acollectives.util.ModLootTableModifiers;
+import net.bovine.acollectives.util.ModTags;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -24,6 +26,7 @@ public class AccumulativeCollections implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModPaintings.registerPaintings();
 		ModSounds.registerSounds();
+		ModLootTableModifiers.modifyLootTables();
 
 		ModSounds.registerSounds();
 		LOGGER.info("Hello Fabric world!");

@@ -16,6 +16,8 @@ public class ModLootTableModifiers {
             new Identifier("minecraft", "entities/goat");
     private static final Identifier ZOMBIE_ID =
             new Identifier("minecraft", "entities/zombie");
+    private static final Identifier SQUID_ID =
+            new Identifier("minecraft", "entities/squid");
 
     public static void modifyLootTables() {
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
@@ -29,12 +31,22 @@ public class ModLootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(GOAT_ID.equals(id)) {
+            if(ZOMBIE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.25f)) // Drops 25% of the time
                         .with(ItemEntry.builder(Items.FEATHER))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 3.0f)).build());
+
+                tableBuilder.pool(poolBuilder.build());
+            }
+
+            if(SQUID_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.25f)) // Drops 25% of the time
+                        .with(ItemEntry.builder(ModItems.CALAMARI))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 4.0f)).build());
 
                 tableBuilder.pool(poolBuilder.build());
             }

@@ -1,12 +1,19 @@
 package net.bovine.acollectives.block;
 
+import com.terraformersmc.terraform.sign.block.TerraformHangingSignBlock;
+import com.terraformersmc.terraform.sign.block.TerraformSignBlock;
+import com.terraformersmc.terraform.sign.block.TerraformWallHangingSignBlock;
+import com.terraformersmc.terraform.sign.block.TerraformWallSignBlock;
 import net.bovine.acollectives.AccumulativeCollections;
+import net.bovine.acollectives.block.custom.BarleyCropBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
+import net.minecraft.data.family.BlockFamilies;
+import net.minecraft.data.family.BlockFamily;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
+import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
@@ -41,11 +48,32 @@ public class ModBlocks {
     public static final Block ANCIENT_FENCE_GATE = registerBlock("ancient_fence_gate",
             new FenceGateBlock(WoodType.OAK, FabricBlockSettings.copyOf(Blocks.OAK_FENCE_GATE)));
 
-
     public static final Block ANCIENT_DOOR = registerBlock("ancient_door",
-            new DoorBlock(BlockSetType.OAK, FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+            new DoorBlock(BlockSetType.OAK, FabricBlockSettings.copyOf(Blocks.OAK_DOOR)));
     public static final Block ANCIENT_TRAPDOOR = registerBlock("ancient_trapdoor",
-            new TrapdoorBlock(BlockSetType.OAK, FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+            new TrapdoorBlock(BlockSetType.OAK, FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR)));
+
+    //public static final BlockSetType ANCIENT = BlockSetType.register(new BlockSetType("ancient"));
+    //public static final WoodType ANCIENTWOODTYPE = WoodType.register(new WoodType("ancientwoodtype", BlockSetType.ANCIENT));
+
+    /*
+    public static final Identifier ANCIENT_SIGN_TEXTURE = new Identifier(AccumulativeCollections.MOD_ID, "entity/signs/ancient");
+    public static final Identifier ANCIENT_HANGING_SIGN_TEXTURE = new Identifier(AccumulativeCollections.MOD_ID, "entity/signs/hanging/ancient");
+    public static final Identifier ANCIENT_HANGING_GUI_SIGN_TEXTURE = new Identifier(AccumulativeCollections.MOD_ID, "texture/gui/hanging_signs/ancient");
+
+    public static final Block ANCIENT_STANDING_SIGN = Registry.register(Registries.BLOCK, new Identifier(AccumulativeCollections.MOD_ID, "ancient_standing_sign"),
+            new TerraformSignBlock(ANCIENT_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.OAK_SIGN)));
+    public static final Block ANCIENT_WALL_SIGN = Registry.register(Registries.BLOCK, new Identifier(AccumulativeCollections.MOD_ID, "ancient_wall_sign"),
+            new TerraformWallSignBlock(ANCIENT_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.OAK_WALL_SIGN)));
+    public static final Block ANCIENT_HANGING_SIGN = Registry.register(Registries.BLOCK, new Identifier(AccumulativeCollections.MOD_ID, "ancient_hanging_sign"),
+            new TerraformHangingSignBlock(ANCIENT_HANGING_SIGN_TEXTURE, ANCIENT_HANGING_GUI_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.OAK_HANGING_SIGN)));
+    public static final Block ANCIENT_WALL_HANGING_SIGN = Registry.register(Registries.BLOCK, new Identifier(AccumulativeCollections.MOD_ID, "ancient_wall_hanging_sign"),
+            new TerraformWallHangingSignBlock(ANCIENT_SIGN_TEXTURE, ANCIENT_HANGING_GUI_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.OAK_WALL_HANGING_SIGN)));
+
+    public static final BlockFamily ANCIENT_FAMILY = BlockFamilies.register(ModBlocks.ANCIENT_PLANKS)
+            .sign(ModBlocks.ANCIENT_STANDING_SIGN, ModBlocks.ANCIENT_WALL_SIGN)
+            .group("wooden").unlockCriterionName("has_planks").build();
+     */
 
     public static final Block HAUNT_LOG = registerBlock("haunt_log",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_LOG).strength(4f)));
@@ -72,6 +100,11 @@ public class ModBlocks {
     public static final Block HAUNT_FENCE_GATE = registerBlock("haunt_fence_gate",
             new FenceGateBlock(WoodType.DARK_OAK, FabricBlockSettings.copyOf(Blocks.DARK_OAK_FENCE_GATE)));
 
+    public static final Block HAUNT_DOOR = registerBlock("haunt_door",
+            new DoorBlock(BlockSetType.DARK_OAK, FabricBlockSettings.copyOf(Blocks.DARK_OAK_DOOR)));
+    public static final Block HAUNT_TRAPDOOR = registerBlock("haunt_trapdoor",
+            new TrapdoorBlock(BlockSetType.DARK_OAK, FabricBlockSettings.copyOf(Blocks.DARK_OAK_TRAPDOOR)));
+
     public static final Block PALM_LOG = registerBlock("palm_log",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.JUNGLE_LOG).strength(4f)));
     public static final Block PALM_WOOD = registerBlock("palm_wood",
@@ -79,8 +112,21 @@ public class ModBlocks {
     public static final Block PALM_PLANKS = registerBlock("palm_planks",
             new Block(FabricBlockSettings.copyOf(Blocks.JUNGLE_PLANKS).strength(4f)));
 
+    public static final Block OLIVE_LOG = registerBlock("olive_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(4f)));
+    public static final Block OLIVE_WOOD = registerBlock("olive_wood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).strength(4f)));
+    public static final Block OLIVE_PLANKS = registerBlock("olive_planks",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).strength(4f)));
+
+    public static final Block BARLEY_CROP = Registry.register(Registries.BLOCK, new Identifier(AccumulativeCollections.MOD_ID, "barley_crop"),
+            new BarleyCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+
+    public static final Block TEA_CROP = Registry.register(Registries.BLOCK, new Identifier(AccumulativeCollections.MOD_ID, "tea_crop"),
+            new BarleyCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+
     public static final Block CHOCOLATE_CAKE = registerBlock("chocolate_cake",
-            new CakeBlock(FabricBlockSettings.copyOf(Blocks.CAKE))); 
+            new CakeBlock(FabricBlockSettings.copyOf(Blocks.CAKE)));
 
     public static final Block BUTTERCUP = registerBlock("buttercup",
             new FlowerBlock(StatusEffects.POISON, 10,
@@ -173,6 +219,44 @@ public class ModBlocks {
     public static final Block POTTED_LIGHT_BLUE_ROSE = registerBlock("potted_light_blue_rose",
             new FlowerPotBlock(LIGHT_BLUE_ROSE, FabricBlockSettings.copyOf(Blocks.POTTED_BLUE_ORCHID).nonOpaque()));
 
+    public static final Block REINFORCED_OAK_LOG = registerBlock("reinforced_oak_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(6f)));
+    public static final Block REINFORCED_BIRCH_LOG = registerBlock("reinforced_birch_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_LOG).strength(6f)));
+    public static final Block REINFORCED_SPRUCE_LOG = registerBlock("reinforced_spruce_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.SPRUCE_LOG).strength(6f)));
+    public static final Block REINFORCED_JUNGLE_LOG = registerBlock("reinforced_jungle_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.JUNGLE_LOG).strength(6f)));
+    public static final Block REINFORCED_ACACIA_LOG = registerBlock("reinforced_acacia_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.ACACIA_LOG).strength(6f)));
+    public static final Block REINFORCED_DARK_OAK_LOG = registerBlock("reinforced_dark_oak_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_LOG).strength(6f)));
+    public static final Block REINFORCED_MANGROVE_LOG = registerBlock("reinforced_mangrove_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.MANGROVE_LOG).strength(6f)));
+    public static final Block REINFORCED_CHERRY_LOG = registerBlock("reinforced_cherry_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.CHERRY_LOG).strength(6f)));
+    public static final Block REINFORCED_ANCIENT_LOG = registerBlock("reinforced_ancient_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(6f)));
+    public static final Block REINFORCED_HAUNT_LOG = registerBlock("reinforced_haunt_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_LOG).strength(6f)));
+
+    public static final Block REINFORCED_STRIPPED_OAK_LOG = registerBlock("reinforced_stripped_oak_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG).strength(6f)));
+    public static final Block REINFORCED_STRIPPED_BIRCH_LOG = registerBlock("reinforced_stripped_birch_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_BIRCH_LOG).strength(6f)));
+    public static final Block REINFORCED_STRIPPED_SPRUCE_LOG = registerBlock("reinforced_stripped_spruce_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_SPRUCE_LOG).strength(6f)));
+    public static final Block REINFORCED_STRIPPED_JUNGLE_LOG = registerBlock("reinforced_stripped_jungle_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_JUNGLE_LOG).strength(6f)));
+    public static final Block REINFORCED_STRIPPED_ACACIA_LOG = registerBlock("reinforced_stripped_acacia_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_ACACIA_LOG).strength(6f)));
+    public static final Block REINFORCED_STRIPPED_DARK_OAK_LOG = registerBlock("reinforced_stripped_dark_oak_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_DARK_OAK_LOG).strength(6f)));
+    public static final Block REINFORCED_STRIPPED_MANGROVE_LOG = registerBlock("reinforced_stripped_mangrove_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_MANGROVE_LOG).strength(6f)));
+    public static final Block REINFORCED_STRIPPED_CHERRY_LOG = registerBlock("reinforced_stripped_cherry_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_CHERRY_LOG).strength(6f)));
+
     public static final Block RAINBOW_WOOL = registerBlock("rainbow_wool",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.RED_WOOL)));
 
@@ -201,24 +285,105 @@ public class ModBlocks {
     public static final Block DEEPSLATE_LEAD_ORE = registerBlock("deepslate_lead_ore",
             new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_IRON_ORE)));
 
+    public static final Block MAUSTONE = registerBlock("maustone",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
+    public static final Block LURSTONE = registerBlock("lurstone",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
+
     public static final Block SKYSTONE = registerBlock("skystone",
             new Block(FabricBlockSettings.copyOf(Blocks.GLOWSTONE).lightLevel(0)));
     public static final Block GLOWING_OBSIDIAN = registerBlock("glowing_obsidian",
             new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).lightLevel(12)));
 
+    public static final Block EXPLOSIVE_BARREL = registerBlock("explosive_barrel",
+            new TntBlock(FabricBlockSettings.copyOf(Blocks.TNT)));
+
     public static final Block SUPPLY_CRATE = registerBlock("supply_crate",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).strength(4f)));
 
+    public static final Block COOKING_RANGE = registerBlock("cooking_range",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
+    /*
     public static final Block UNLIT_TORCH = registerBlock("unlit_torch",
+            new TorchBlock(DefaultParticleType smoke, FabricBlockSettings.copyOf(Blocks.WALL_TORCH).lightLevel(0)));
+
+    public static final Block WALL_UNLIT_TORCH = registerBlock("wall_unlit_torch",
             new Block(FabricBlockSettings.copyOf(Blocks.TORCH).lightLevel(0)));
+     */
+
+    public static final Block LEADED_BLACK_STAINED_GLASS = registerBlock("leaded_black_stained_glass",
+            new Block(FabricBlockSettings.copyOf(Blocks.BLACK_STAINED_GLASS)));
+    public static final Block LEADED_BLUE_STAINED_GLASS = registerBlock("leaded_blue_stained_glass",
+            new Block(FabricBlockSettings.copyOf(Blocks.BLUE_STAINED_GLASS)));
+    public static final Block LEADED_BROWN_STAINED_GLASS = registerBlock("leaded_brown_stained_glass",
+            new Block(FabricBlockSettings.copyOf(Blocks.BROWN_STAINED_GLASS)));
+    public static final Block LEADED_CYAN_STAINED_GLASS = registerBlock("leaded_cyan_stained_glass",
+            new Block(FabricBlockSettings.copyOf(Blocks.CYAN_STAINED_GLASS)));
+    public static final Block LEADED_GREEN_STAINED_GLASS = registerBlock("leaded_green_stained_glass",
+            new Block(FabricBlockSettings.copyOf(Blocks.GREEN_STAINED_GLASS)));
+    public static final Block LEADED_GRAY_STAINED_GLASS = registerBlock("leaded_gray_stained_glass",
+            new Block(FabricBlockSettings.copyOf(Blocks.GRAY_STAINED_GLASS)));
+    public static final Block LEADED_LIGHT_BLUE_STAINED_GLASS = registerBlock("leaded_light_blue_stained_glass",
+            new Block(FabricBlockSettings.copyOf(Blocks.LIGHT_BLUE_STAINED_GLASS)));
+    public static final Block LEADED_LIGHT_GRAY_STAINED_GLASS = registerBlock("leaded_light_gray_stained_glass",
+            new Block(FabricBlockSettings.copyOf(Blocks.LIGHT_GRAY_STAINED_GLASS)));
+    public static final Block LEADED_LIME_STAINED_GLASS = registerBlock("leaded_lime_stained_glass",
+            new Block(FabricBlockSettings.copyOf(Blocks.LIME_STAINED_GLASS)));
+    public static final Block LEADED_MAGENTA_STAINED_GLASS = registerBlock("leaded_magenta_stained_glass",
+            new Block(FabricBlockSettings.copyOf(Blocks.MAGENTA_STAINED_GLASS)));
+    public static final Block LEADED_ORANGE_STAINED_GLASS = registerBlock("leaded_orange_stained_glass",
+            new Block(FabricBlockSettings.copyOf(Blocks.ORANGE_STAINED_GLASS)));
+    public static final Block LEADED_PINK_STAINED_GLASS = registerBlock("leaded_pink_stained_glass",
+            new Block(FabricBlockSettings.copyOf(Blocks.PINK_STAINED_GLASS)));
+    public static final Block LEADED_PURPLE_STAINED_GLASS = registerBlock("leaded_purple_stained_glass",
+            new Block(FabricBlockSettings.copyOf(Blocks.PURPLE_STAINED_GLASS)));
+    public static final Block LEADED_RED_STAINED_GLASS = registerBlock("leaded_red_stained_glass",
+            new Block(FabricBlockSettings.copyOf(Blocks.RED_STAINED_GLASS)));
+    public static final Block LEADED_WHITE_STAINED_GLASS = registerBlock("leaded_white_stained_glass",
+            new Block(FabricBlockSettings.copyOf(Blocks.WHITE_STAINED_GLASS)));
+    public static final Block LEADED_YELLOW_STAINED_GLASS = registerBlock("leaded_yellow_stained_glass",
+            new Block(FabricBlockSettings.copyOf(Blocks.YELLOW_STAINED_GLASS)));
+
+    public static final Block LEADED_BLACK_STAINED_GLASS_PANE = registerBlock("leaded_black_stained_glass_pane",
+            new PaneBlock(FabricBlockSettings.copyOf(Blocks.BLACK_STAINED_GLASS_PANE)));
+    public static final Block LEADED_BLUE_STAINED_GLASS_PANE = registerBlock("leaded_blue_stained_glass_pane",
+            new PaneBlock(FabricBlockSettings.copyOf(Blocks.BLUE_STAINED_GLASS_PANE)));
+    public static final Block LEADED_BROWN_STAINED_GLASS_PANE = registerBlock("leaded_brown_stained_glass_pane",
+            new PaneBlock(FabricBlockSettings.copyOf(Blocks.BROWN_STAINED_GLASS_PANE)));
+    public static final Block LEADED_CYAN_STAINED_GLASS_PANE = registerBlock("leaded_cyan_stained_glass_pane",
+            new PaneBlock(FabricBlockSettings.copyOf(Blocks.CYAN_STAINED_GLASS_PANE)));
+    public static final Block LEADED_GRAY_STAINED_GLASS_PANE = registerBlock("leaded_gray_stained_glass_pane",
+            new PaneBlock(FabricBlockSettings.copyOf(Blocks.GRAY_STAINED_GLASS_PANE)));
+    public static final Block LEADED_GREEN_STAINED_GLASS_PANE = registerBlock("leaded_green_stained_glass_pane",
+            new PaneBlock(FabricBlockSettings.copyOf(Blocks.GREEN_STAINED_GLASS_PANE)));
+    public static final Block LEADED_LIGHT_BLUE_STAINED_GLASS_PANE = registerBlock("leaded_light_blue_stained_glass_pane",
+            new PaneBlock(FabricBlockSettings.copyOf(Blocks.LIGHT_BLUE_STAINED_GLASS_PANE)));
+    public static final Block LEADED_LIGHT_GRAY_STAINED_GLASS_PANE = registerBlock("leaded_light_gray_stained_glass_pane",
+            new PaneBlock(FabricBlockSettings.copyOf(Blocks.LIGHT_GRAY_STAINED_GLASS_PANE)));
+    public static final Block LEADED_LIME_STAINED_GLASS_PANE = registerBlock("leaded_lime_stained_glass_pane",
+            new PaneBlock(FabricBlockSettings.copyOf(Blocks.LIME_STAINED_GLASS_PANE)));
+    public static final Block LEADED_MAGENTA_STAINED_GLASS_PANE = registerBlock("leaded_magenta_stained_glass_pane",
+            new PaneBlock(FabricBlockSettings.copyOf(Blocks.MAGENTA_STAINED_GLASS_PANE)));
+    public static final Block LEADED_ORANGE_STAINED_GLASS_PANE = registerBlock("leaded_orange_stained_glass_pane",
+            new PaneBlock(FabricBlockSettings.copyOf(Blocks.ORANGE_STAINED_GLASS_PANE)));
+    public static final Block LEADED_PINK_STAINED_GLASS_PANE = registerBlock("leaded_pink_stained_glass_pane",
+            new PaneBlock(FabricBlockSettings.copyOf(Blocks.PINK_STAINED_GLASS_PANE)));
+    public static final Block LEADED_PURPLE_STAINED_GLASS_PANE = registerBlock("leaded_purple_stained_glass_pane",
+            new PaneBlock(FabricBlockSettings.copyOf(Blocks.PURPLE_STAINED_GLASS_PANE)));
+    public static final Block LEADED_RED_STAINED_GLASS_PANE = registerBlock("leaded_red_stained_glass_pane",
+            new PaneBlock(FabricBlockSettings.copyOf(Blocks.RED_STAINED_GLASS_PANE)));
+    public static final Block LEADED_WHITE_STAINED_GLASS_PANE = registerBlock("leaded_white_stained_glass_pane",
+            new PaneBlock(FabricBlockSettings.copyOf(Blocks.WHITE_STAINED_GLASS_PANE)));
+    public static final Block LEADED_YELLOW_STAINED_GLASS_PANE = registerBlock("leaded_yellow_stained_glass_pane",
+            new PaneBlock(FabricBlockSettings.copyOf(Blocks.YELLOW_STAINED_GLASS_PANE)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, new Identifier(AccumulativeCollections.MOD_ID, name), block);
     }
 
-    private static Item registerBlockItem(String name, Block block) {
-        return Registry.register(Registries.ITEM, new Identifier(AccumulativeCollections.MOD_ID, name),
+    private static void registerBlockItem(String name, Block block) {
+        Registry.register(Registries.ITEM, new Identifier(AccumulativeCollections.MOD_ID, name),
                 new BlockItem(block, new FabricItemSettings()));
     }
 

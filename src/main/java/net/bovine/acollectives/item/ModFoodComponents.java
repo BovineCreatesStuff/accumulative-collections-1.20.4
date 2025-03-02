@@ -23,4 +23,8 @@ public class ModFoodComponents {
             .build();
     public static final FoodComponent COOKED_GRAY_COD = new FoodComponent.Builder().hunger(5).saturationModifier(0.50f)
             .build();
+    public static final FoodComponent CALAMARI = new FoodComponent.Builder().hunger(4).saturationModifier(0.55f)
+            .build();
+    public static final FoodComponent FRIED_CALAMARI = new FoodComponent.Builder().hunger(10).saturationModifier(0.75f)
+            .build();
 }

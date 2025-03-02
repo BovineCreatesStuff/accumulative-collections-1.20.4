@@ -1,6 +1,7 @@
 package net.bovine.acollectives.item;
 
 import net.bovine.acollectives.AccumulativeCollections;
+import net.bovine.acollectives.block.ModBlocks;
 import net.bovine.acollectives.sound.ModSounds;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
@@ -11,15 +12,22 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
+    public static final Item BARLEY = registerItem("barley", new Item(new FabricItemSettings()));
+    public static final Item TEA_LEAF = registerItem("tea_leaf", new Item(new FabricItemSettings()));
+    public static final Item OLIVE = registerItem("olive", new Item(new FabricItemSettings()));
     public static final Item COCOA_BUTTER = registerItem("cocoa_butter", new Item(new FabricItemSettings()));
     public static final Item CHEESE = registerItem("cheese", new Item(new FabricItemSettings().food(ModFoodComponents.CHEESE)));
     public static final Item GOAT_CHEESE = registerItem("goat_cheese", new Item(new FabricItemSettings().food(ModFoodComponents.GOAT_CHEESE)));
+    public static final Item OLIVE_OIL_BUCKET = registerItem("olive_oil_bucket", new Item(new FabricItemSettings().maxCount(1)));
     public static final Item WHITE_CHOCOLATE = registerItem("white_chocolate", new Item(new FabricItemSettings().food(ModFoodComponents.WHITE_CHOCOLATE)));
     public static final Item MILK_CHOCOLATE = registerItem("milk_chocolate", new Item(new FabricItemSettings().food(ModFoodComponents.MILK_CHOCOLATE)));
     public static final Item CHEVON = registerItem("chevon", new Item(new FabricItemSettings().food(ModFoodComponents.CHEVON)));
     public static final Item COOKED_CHEVON = registerItem("cooked_chevon", new Item(new FabricItemSettings().food(ModFoodComponents.COOKED_CHEVON)));
     public static final Item GRAY_COD = registerItem("gray_cod", new Item(new FabricItemSettings().food(ModFoodComponents.GRAY_COD)));
     public static final Item COOKED_GRAY_COD = registerItem("cooked_gray_cod", new Item(new FabricItemSettings().food(ModFoodComponents.COOKED_GRAY_COD)));
+    public static final Item CALAMARI = registerItem("calamari", new Item(new FabricItemSettings().food(ModFoodComponents.CALAMARI)));
+    public static final Item FRIED_CALAMARI = registerItem("fried_calamari", new Item(new FabricItemSettings().food(ModFoodComponents.FRIED_CALAMARI)));
+    public static final Item GRAY_COD_BUCKET = registerItem("gray_cod_bucket", new Item(new FabricItemSettings().maxCount(1)));
     public static final Item MOOSHROOM_BURGER = registerItem("mooshroom_burger", new Item(new FabricItemSettings().food(ModFoodComponents.MOOSHROOM_BURGER)));
     public static final Item FANCY_FEATHER = registerItem("fancy_feather", new Item(new FabricItemSettings()));
     public static final Item RUBY = registerItem("ruby", new Item(new FabricItemSettings()));
@@ -37,6 +45,12 @@ public class ModItems {
     public static final Item OBSIDIAN_ARROW = registerItem("obsidian_arrow",
             new ArrowItem(new FabricItemSettings().maxDamage(6)));
 
+    public static final Item BARLEY_SEEDS = registerItem("barley_seeds",
+            new AliasedBlockItem(ModBlocks.BARLEY_CROP, new FabricItemSettings()));
+
+    public static final Item TEA_SEEDS = registerItem("tea_seeds",
+            new AliasedBlockItem(ModBlocks.TEA_CROP, new FabricItemSettings()));
+
     public static final Item GOLD_AMULET = registerItem("gold_amulet", new Item(new FabricItemSettings().maxCount(1)));
     public static final Item GOLD_RING = registerItem("gold_ring", new Item(new FabricItemSettings().maxCount(1)));
     public static final Item DIAMOND_AMULET = registerItem("diamond_amulet", new Item(new FabricItemSettings().maxCount(1)));
@@ -50,6 +64,15 @@ public class ModItems {
             new ArmorItem(ModArmorMaterials.STUDDED, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
     public static final Item STUDDED_BOOTS = registerItem("studded_boots",
             new ArmorItem(ModArmorMaterials.STUDDED, ArmorItem.Type.BOOTS, new FabricItemSettings()));
+
+    public static final Item PLATE_HELMET = registerItem("plate_helmet",
+            new ArmorItem(ModArmorMaterials.PLATE, ArmorItem.Type.HELMET, new FabricItemSettings()));
+    public static final Item PLATE_CHESTPLATE = registerItem("plate_chestplate",
+            new ArmorItem(ModArmorMaterials.PLATE, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
+    public static final Item PLATE_LEGGINGS = registerItem("plate_leggings",
+            new ArmorItem(ModArmorMaterials.PLATE, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
+    public static final Item PLATE_BOOTS = registerItem("plate_boots",
+            new ArmorItem(ModArmorMaterials.PLATE, ArmorItem.Type.BOOTS, new FabricItemSettings()));
 
     public static final Item WOODEN_DAGGER = registerItem("wooden_dagger", new Item(new FabricItemSettings().maxCount(1)));
     public static final Item STONE_DAGGER = registerItem("stone_dagger", new Item(new FabricItemSettings().maxCount(1)));
@@ -65,6 +88,13 @@ public class ModItems {
     public static final Item DIAMOND_BATTLEAXE = registerItem("diamond_battleaxe", new Item(new FabricItemSettings().maxCount(1)));
     public static final Item NETHERITE_BATTLEAXE = registerItem("netherite_battleaxe", new Item(new FabricItemSettings().maxCount(1)));
 
+    /*
+    public static final Item ANCIENT_SIGN = registerItem("ancient_sign",
+            new SignItem(new FabricItemSettings().maxCount(16), ModBlocks.ANCIENT_STANDING_SIGN, ModBlocks.ANCIENT_WALL_SIGN));
+    public static final Item ANCIENT_HANGING_SIGN = registerItem("ancient_hanging_sign",
+            new HangingSignItem(ModBlocks.ANCIENT_HANGING_SIGN, ModBlocks.ANCIENT_WALL_HANGING_SIGN, new FabricItemSettings().maxCount(16)));
+
+     */
 
     public static final Item MUSIC_DISC_ALPHA = registerItem("music_disc_alpha",
             new MusicDiscItem(15, ModSounds.ALPHA, new FabricItemSettings().maxCount(1), 603));
@@ -81,7 +111,7 @@ public class ModItems {
     public static final Item MUSIC_DISC_MAGNETIC_CIRCUIT = registerItem("music_disc_magnetic_circuit",
             new MusicDiscItem(12, ModSounds.MAGNETIC_CIRCUIT, new FabricItemSettings().maxCount(1), 193));
 
-    public static final Item GOLD_COIN = registerItem("gold_coin", new Item(new FabricItemSettings()));
+    public static final Item GOLD_COIN = registerItem("gold_coin", new Item(new FabricItemSettings().maxCount(999)));
     public static final Item DEVELOPER_NOTE_ERROR = registerItem("developer_note_error", new Item(new FabricItemSettings()));
 
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries) {

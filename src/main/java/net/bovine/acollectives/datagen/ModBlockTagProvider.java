@@ -26,6 +26,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.RUBY_BLOCK)
                 .add(ModBlocks.DEEPSLATE_RUBY_ORE);
 
+        getOrCreateTagBuilder(ModTags.Blocks.LEADED_GLASS_BLOCKS)
+                .add(ModBlocks.LEADED_BLACK_STAINED_GLASS)
+                .add(ModBlocks.LEADED_BLUE_STAINED_GLASS)
+                .add(ModBlocks.LEADED_BROWN_STAINED_GLASS)
+                .add(ModBlocks.LEADED_CYAN_STAINED_GLASS)
+                .add(ModBlocks.LEADED_GRAY_STAINED_GLASS)
+                .add(ModBlocks.LEADED_GREEN_STAINED_GLASS);
+
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.LEAD_ORE)
                 .add(ModBlocks.RUBY_ORE)
@@ -44,6 +52,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.LEAD_BLOCK)
                 .add(ModBlocks.RUBY_BLOCK);
 
+        getOrCreateTagBuilder(ModTags.Blocks.ANCIENT_LOGS)
+                .add(ModBlocks.ANCIENT_LOG)
+                .add(ModBlocks.ANCIENT_WOOD)
+                .add(ModBlocks.STRIPPED_ANCIENT_LOG)
+                .add(ModBlocks.STRIPPED_ANCIENT_WOOD);
+
         getOrCreateTagBuilder(BlockTags.FENCES)
                 .add(ModBlocks.ANCIENT_FENCE);
 
@@ -59,5 +73,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.HAUNT_WOOD)
                 .add(ModBlocks.STRIPPED_HAUNT_LOG)
                 .add(ModBlocks.STRIPPED_HAUNT_WOOD);
+
+        getOrCreateTagBuilder(BlockTags.PLANKS)
+                .add(ModBlocks.ANCIENT_PLANKS)
+                .add(ModBlocks.HAUNT_PLANKS);
     }
 }

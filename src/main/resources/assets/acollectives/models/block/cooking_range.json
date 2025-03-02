@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "acollectives:block/cooking_range_front",
+    "side": "acollectives:block/cooking_range_end",
+    "east": "acollectives:block/cooking_range_side",
+    "top": "acollectives:block/cooking_range_top",
+    "bottom": "acollectives:block/cooking_range_end"
+  }
+}
