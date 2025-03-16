@@ -9,6 +9,7 @@ import net.minecraft.block.LightBlock;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.data.client.TexturedModel;
 import net.minecraft.item.ArmorItem;
 
 public class ModModelProvider extends FabricModelProvider {
@@ -28,8 +29,11 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_ANCIENT_LOG).log(ModBlocks.STRIPPED_ANCIENT_LOG).wood(ModBlocks.STRIPPED_ANCIENT_WOOD);
         BlockStateModelGenerator.BlockTexturePool ancientPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ANCIENT_PLANKS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ANCIENT_LEAVES);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.OLIVE_LEAVES);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SKYSTONE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GLOWING_OBSIDIAN);
+
+        blockStateModelGenerator.registerSingleton(ModBlocks.COOKING_RANGE, TexturedModel.ORIENTABLE);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MAUSTONE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LURSTONE);
@@ -39,9 +43,11 @@ public class ModModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool hauntPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.HAUNT_PLANKS);
 
         blockStateModelGenerator.registerLog(ModBlocks.PALM_LOG).log(ModBlocks.PALM_LOG).wood(ModBlocks.PALM_WOOD);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_PALM_LOG).log(ModBlocks.STRIPPED_PALM_LOG).wood(ModBlocks.STRIPPED_PALM_WOOD);
         BlockStateModelGenerator.BlockTexturePool palmPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.PALM_PLANKS);
 
         blockStateModelGenerator.registerLog(ModBlocks.OLIVE_LOG).log(ModBlocks.OLIVE_LOG).wood(ModBlocks.OLIVE_WOOD);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_OLIVE_LOG).log(ModBlocks.STRIPPED_OLIVE_LOG).wood(ModBlocks.STRIPPED_OLIVE_WOOD);
         BlockStateModelGenerator.BlockTexturePool olivePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.OLIVE_PLANKS);
 
         BlockStateModelGenerator.BlockTexturePool sugarBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SUGAR_BRICKS);
@@ -63,6 +69,20 @@ public class ModModelProvider extends FabricModelProvider {
         //hauntPool.pressurePlate(ModBlocks.HAUNT_PRESSURE_PLATE);
         hauntPool.fence(ModBlocks.HAUNT_FENCE);
         hauntPool.fenceGate(ModBlocks.HAUNT_FENCE_GATE);
+
+        palmPool.stairs(ModBlocks.PALM_STAIRS);
+        palmPool.slab(ModBlocks.PALM_SLAB);
+        palmPool.button(ModBlocks.PALM_BUTTON);
+        //palmPool.pressurePlate(ModBlocks.PALM_PRESSURE_PLATE);
+        palmPool.fence(ModBlocks.PALM_FENCE);
+        palmPool.fenceGate(ModBlocks.PALM_FENCE_GATE);
+
+        olivePool.stairs(ModBlocks.OLIVE_STAIRS);
+        olivePool.slab(ModBlocks.OLIVE_SLAB);
+        olivePool.button(ModBlocks.OLIVE_BUTTON);
+        //olivePool.pressurePlate(ModBlocks.OLIVE_PRESSURE_PLATE);
+        olivePool.fence(ModBlocks.OLIVE_FENCE);
+        olivePool.fenceGate(ModBlocks.OLIVE_FENCE_GATE);
 
         blockStateModelGenerator.registerDoor(ModBlocks.ANCIENT_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.ANCIENT_TRAPDOOR);
@@ -114,6 +134,16 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerGlassPane(ModBlocks.LEADED_YELLOW_STAINED_GLASS, ModBlocks.LEADED_YELLOW_STAINED_GLASS_PANE);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SUPPLY_CRATE);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.HALL_TILE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.HALL_FLOOR);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.HALL_CEILING);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLUE_HALL_LIGHT);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GREEN_HALL_LIGHT);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RED_HALL_LIGHT);
+        blockStateModelGenerator.registerSingleton(ModBlocks.BLUE_HALL_FLOOR_LIGHT, TexturedModel.CUBE_BOTTOM_TOP);
+        blockStateModelGenerator.registerSingleton(ModBlocks.GREEN_HALL_FLOOR_LIGHT, TexturedModel.CUBE_BOTTOM_TOP);
+        blockStateModelGenerator.registerSingleton(ModBlocks.RED_HALL_FLOOR_LIGHT, TexturedModel.CUBE_BOTTOM_TOP);
 
         //blockStateModelGenerator.registerTorch(ModBlocks.UNLIT_TORCH, ModBlocks.WALL_UNLIT_TORCH);
     }

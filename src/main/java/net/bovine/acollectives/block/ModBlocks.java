@@ -111,6 +111,10 @@ public class ModBlocks {
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.JUNGLE_WOOD).strength(4f)));
     public static final Block PALM_PLANKS = registerBlock("palm_planks",
             new Block(FabricBlockSettings.copyOf(Blocks.JUNGLE_PLANKS).strength(4f)));
+    public static final Block STRIPPED_PALM_LOG = registerBlock("stripped_palm_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.JUNGLE_LOG).strength(4f)));
+    public static final Block STRIPPED_PALM_WOOD = registerBlock("stripped_palm_wood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.JUNGLE_LOG).strength(4f)));
 
     public static final Block OLIVE_LOG = registerBlock("olive_log",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(4f)));
@@ -118,6 +122,38 @@ public class ModBlocks {
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).strength(4f)));
     public static final Block OLIVE_PLANKS = registerBlock("olive_planks",
             new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).strength(4f)));
+    public static final Block OLIVE_LEAVES = registerBlock("olive_leaves",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).strength(4f)));
+    public static final Block STRIPPED_OLIVE_LOG = registerBlock("stripped_olive_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(4f)));
+    public static final Block STRIPPED_OLIVE_WOOD = registerBlock("stripped_olive_wood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(4f)));
+
+    public static final Block PALM_STAIRS = registerBlock("palm_stairs",
+            new StairsBlock(ModBlocks.PALM_PLANKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.JUNGLE_STAIRS)));
+    public static final Block PALM_SLAB = registerBlock("palm_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.JUNGLE_SLAB)));
+
+    public static final Block PALM_BUTTON = registerBlock("palm_button",
+            new ButtonBlock(BlockSetType.JUNGLE, 30, FabricBlockSettings.copyOf(Blocks.JUNGLE_BUTTON).collidable(false)));
+
+    public static final Block PALM_FENCE = registerBlock("palm_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.JUNGLE_FENCE)));
+    public static final Block PALM_FENCE_GATE = registerBlock("palm_fence_gate",
+            new FenceGateBlock(WoodType.JUNGLE, FabricBlockSettings.copyOf(Blocks.JUNGLE_FENCE_GATE)));
+
+    public static final Block OLIVE_STAIRS = registerBlock("olive_stairs",
+            new StairsBlock(ModBlocks.OLIVE_PLANKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_STAIRS)));
+    public static final Block OLIVE_SLAB = registerBlock("olive_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB)));
+
+    public static final Block OLIVE_BUTTON = registerBlock("olive_button",
+            new ButtonBlock(BlockSetType.OAK, 30, FabricBlockSettings.copyOf(Blocks.OAK_BUTTON).collidable(false)));
+
+    public static final Block OLIVE_FENCE = registerBlock("olive_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE)));
+    public static final Block OLIVE_FENCE_GATE = registerBlock("olive_fence_gate",
+            new FenceGateBlock(WoodType.OAK, FabricBlockSettings.copyOf(Blocks.OAK_FENCE_GATE)));
 
     public static final Block BARLEY_CROP = Registry.register(Registries.BLOCK, new Identifier(AccumulativeCollections.MOD_ID, "barley_crop"),
             new BarleyCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
@@ -376,6 +412,25 @@ public class ModBlocks {
             new PaneBlock(FabricBlockSettings.copyOf(Blocks.WHITE_STAINED_GLASS_PANE)));
     public static final Block LEADED_YELLOW_STAINED_GLASS_PANE = registerBlock("leaded_yellow_stained_glass_pane",
             new PaneBlock(FabricBlockSettings.copyOf(Blocks.YELLOW_STAINED_GLASS_PANE)));
+
+    public static final Block HALL_TILE = registerBlock("hall_tile",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
+    public static final Block HALL_FLOOR = registerBlock("hall_floor",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
+    public static final Block HALL_CEILING = registerBlock("hall_ceiling",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
+    public static final Block BLUE_HALL_LIGHT = registerBlock("blue_hall_light",
+            new Block(FabricBlockSettings.copyOf(Blocks.SEA_LANTERN).lightLevel(15)));
+    public static final Block GREEN_HALL_LIGHT = registerBlock("green_hall_light",
+            new Block(FabricBlockSettings.copyOf(Blocks.SEA_LANTERN).lightLevel(15)));
+    public static final Block RED_HALL_LIGHT = registerBlock("red_hall_light",
+            new Block(FabricBlockSettings.copyOf(Blocks.SEA_LANTERN).lightLevel(15)));
+    public static final Block BLUE_HALL_FLOOR_LIGHT = registerBlock("blue_hall_floor_light",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE).lightLevel(15)));
+    public static final Block GREEN_HALL_FLOOR_LIGHT = registerBlock("green_hall_floor_light",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE).lightLevel(15)));
+    public static final Block RED_HALL_FLOOR_LIGHT = registerBlock("red_hall_floor_light",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE).lightLevel(15)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
