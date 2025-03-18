@@ -135,6 +135,8 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SUPPLY_CRATE);
 
+        blockStateModelGenerator.registerSingleton(ModBlocks.COIN_PILE, TexturedModel.CUBE_COLUMN);
+
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.HALL_TILE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.HALL_FLOOR);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.HALL_CEILING);
@@ -219,6 +221,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.FILLED_ENVELOPE, Models.GENERATED);
         itemModelGenerator.register(ModItems.CLOSED_ENVELOPE, Models.GENERATED);
         itemModelGenerator.register(ModItems.ORDER_FORM, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.MEAT_CHUNK, Models.GENERATED);
 
         //itemModelGenerator.register(ModItems.ANCIENT_HANGING_SIGN, Models.GENERATED);
     }

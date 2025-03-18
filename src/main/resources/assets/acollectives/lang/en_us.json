@@ -231,6 +231,7 @@
 
   "block.acollectives.explosive_barrel": "Explosive Barrel",
   "block.acollectives.cooking_range": "Cooking Range",
+  "block.acollectives.coin_pile": "Pile of Gold Coins",
 
   "block.acollectives.hall_tile": "Hall Tile",
   "block.acollectives.hall_floor": "Hall Floor",
@@ -245,6 +246,7 @@
   "block.acollectives.unlit_torch": "Unlit Torch",
 
   "block.acollectives.supply_crate": "Steve Co. Supply Crate",
+  "item.acollectives.meat_chunk": "Chunk of Meat",
 
   "painting.acollectives.mona.title": "Mona",
   "painting.acollectives.mona.author": "Leonardo da Vinci",
@@ -292,6 +294,12 @@
   "painting.acollectives.field.author": "Claude Monet",
   "painting.acollectives.george.title": "George",
   "painting.acollectives.george.author": "Gilbert Stuart",
+
+  "sounds.acollectives.coin_pile_break": "Coin Pile Break",
+  "sounds.acollectives.coin_pile_step": "Coin Pile Step",
+  "sounds.acollectives.coin_pile_place": "Coin Pile Place",
+  "sounds.acollectives.coin_pile_fall": "Coin Pile Fall",
+  "sounds.acollectives.coin_pile_hit": "Coin Pile Hit",
 
   "itemgroup.acollectives": "Accumulative Collections"
 }

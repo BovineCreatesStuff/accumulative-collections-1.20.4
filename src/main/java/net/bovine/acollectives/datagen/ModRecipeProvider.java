@@ -41,12 +41,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 ModBlocks.RUBY_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.LEAD_INGOT, RecipeCategory.DECORATIONS,
                 ModBlocks.LEAD_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.GOLD_COIN, RecipeCategory.DECORATIONS,
+                ModBlocks.COIN_PILE);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.COCOA_BUTTER, 1)
                 .pattern("###")
                 .input('#', Items.COCOA_BEANS)
                 .criterion(hasItem(Items.COCOA_BEANS), conditionsFromItem(Items.COCOA_BEANS))
                 .offerTo(exporter);
+
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.OLIVE_OIL_BUCKET, 1)
                 .input(ModItems.OLIVE)

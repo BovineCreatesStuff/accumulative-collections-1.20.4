@@ -6,6 +6,7 @@ import com.terraformersmc.terraform.sign.block.TerraformWallHangingSignBlock;
 import com.terraformersmc.terraform.sign.block.TerraformWallSignBlock;
 import net.bovine.acollectives.AccumulativeCollections;
 import net.bovine.acollectives.block.custom.BarleyCropBlock;
+import net.bovine.acollectives.sound.ModSounds;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
@@ -339,6 +340,9 @@ public class ModBlocks {
 
     public static final Block COOKING_RANGE = registerBlock("cooking_range",
             new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
+
+    public static final Block COIN_PILE = registerBlock("coin_pile",
+            new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK).sounds(ModSounds.COIN_PILE_SOUNDS).breakInstantly()));
     /*
     public static final Block UNLIT_TORCH = registerBlock("unlit_torch",
             new TorchBlock(DefaultParticleType smoke, FabricBlockSettings.copyOf(Blocks.WALL_TORCH).lightLevel(0)));

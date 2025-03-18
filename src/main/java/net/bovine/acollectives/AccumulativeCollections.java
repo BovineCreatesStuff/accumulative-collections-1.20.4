@@ -25,10 +25,9 @@ public class AccumulativeCollections implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModPaintings.registerPaintings();
-		ModSounds.registerSounds();
 		ModLootTableModifiers.modifyLootTables();
-
 		ModSounds.registerSounds();
+
 		LOGGER.info("Hello Fabric world!");
 	}
 }

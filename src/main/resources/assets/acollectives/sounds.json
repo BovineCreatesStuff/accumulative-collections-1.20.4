@@ -1,4 +1,49 @@
 {
+  "coin_pile_break": {
+    "subtitle": "sounds.acollectives.coin_pile_break",
+    "sounds": [
+      "acollectives:coin_pile1",
+      "acollectives:coin_pile2",
+      "acollectives:coin_pile3",
+      "acollectives:coin_pile4"
+    ]
+  },
+  "coin_pile_step": {
+    "subtitle": "sounds.acollectives.coin_pile_step",
+    "sounds": [
+      "acollectives:coin_pile1",
+      "acollectives:coin_pile2",
+      "acollectives:coin_pile3",
+      "acollectives:coin_pile4"
+    ]
+  },
+  "coin_pile_place": {
+    "subtitle": "sounds.acollectives.coin_pile_place",
+    "sounds": [
+      "acollectives:coin_pile1",
+      "acollectives:coin_pile2",
+      "acollectives:coin_pile3",
+      "acollectives:coin_pile4"
+    ]
+  },
+  "coin_pile_fall": {
+    "subtitle": "sounds.acollectives.coin_pile_fall",
+    "sounds": [
+      "acollectives:coin_pile1",
+      "acollectives:coin_pile2",
+      "acollectives:coin_pile3",
+      "acollectives:coin_pile4"
+    ]
+  },
+  "coin_pile_hit": {
+    "subtitle": "sounds.acollectives.coin_pile_hit",
+    "sounds": [
+        "acollectives:coin_pile1",
+        "acollectives:coin_pile2",
+        "acollectives:coin_pile3",
+        "acollectives:coin_pile4"
+    ]
+  },
   "alpha": {
     "sounds": [
       {

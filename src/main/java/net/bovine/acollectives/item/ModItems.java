@@ -27,6 +27,7 @@ public class ModItems {
     public static final Item COOKED_GRAY_COD = registerItem("cooked_gray_cod", new Item(new FabricItemSettings().food(ModFoodComponents.COOKED_GRAY_COD)));
     public static final Item CALAMARI = registerItem("calamari", new Item(new FabricItemSettings().food(ModFoodComponents.CALAMARI)));
     public static final Item FRIED_CALAMARI = registerItem("fried_calamari", new Item(new FabricItemSettings().food(ModFoodComponents.FRIED_CALAMARI)));
+    public static final Item MEAT_CHUNK = registerItem("meat_chunk", new Item(new FabricItemSettings().food(ModFoodComponents.MEAT_CHUNK)));
     public static final Item GRAY_COD_BUCKET = registerItem("gray_cod_bucket", new Item(new FabricItemSettings().maxCount(1)));
     public static final Item MOOSHROOM_BURGER = registerItem("mooshroom_burger", new Item(new FabricItemSettings().food(ModFoodComponents.MOOSHROOM_BURGER)));
     public static final Item FANCY_FEATHER = registerItem("fancy_feather", new Item(new FabricItemSettings()));

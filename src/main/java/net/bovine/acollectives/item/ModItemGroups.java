@@ -216,6 +216,7 @@ public class ModItemGroups {
                         entries.add(ModItems.MUSIC_DISC_MAGNETIC_CIRCUIT);
 
                         entries.add(ModItems.GOLD_COIN);
+                        entries.add(ModBlocks.COIN_PILE);
                     }).build());
 
     public static void registerItemGroups() {
