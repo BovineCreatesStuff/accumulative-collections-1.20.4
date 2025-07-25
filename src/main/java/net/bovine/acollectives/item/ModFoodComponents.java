@@ -27,6 +27,13 @@ public class ModFoodComponents {
             .build();
     public static final FoodComponent FRIED_CALAMARI = new FoodComponent.Builder().hunger(10).saturationModifier(0.75f)
             .build();
-    public static final FoodComponent MEAT_CHUNK = new FoodComponent.Builder().hunger(20).saturationModifier(1f)
+    public static final FoodComponent WALL_MEAT = new FoodComponent.Builder().hunger(14).saturationModifier(0.75f)
+            .build();
+    public static final FoodComponent OMELETTE = new FoodComponent.Builder().hunger(9).saturationModifier(0.75f)
+            .build();
+    public static final FoodComponent TEA = new FoodComponent.Builder().hunger(4).saturationModifier(0.50f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 300, 1), 1f).build();
+
+    public static final FoodComponent DARK_CANDY = new FoodComponent.Builder().hunger(5).saturationModifier(0.5f)
             .build();
 }

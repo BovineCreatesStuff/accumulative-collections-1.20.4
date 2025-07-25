@@ -13,11 +13,11 @@ import net.minecraft.util.Identifier;
 
 public class ModLootTableModifiers {
     private static final Identifier GOAT_ID =
-            new Identifier("minecraft", "entities/goat");
+            new Identifier("minecraft", "entity/goat");
     private static final Identifier ZOMBIE_ID =
-            new Identifier("minecraft", "entities/zombie");
+            new Identifier("minecraft", "entity/zombie");
     private static final Identifier SQUID_ID =
-            new Identifier("minecraft", "entities/squid");
+            new Identifier("minecraft", "entity/squid");
 
     public static void modifyLootTables() {
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {

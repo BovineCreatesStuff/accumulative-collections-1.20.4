@@ -18,12 +18,19 @@
   "item.acollectives.fried_calamari": "Fried Calamari",
   "item.acollectives.gray_cod_bucket": "Bucket of Gray Cod",
   "item.acollectives.mooshroom_burger": "Mooshroom Burger",
+  "item.acollectives.omelette": "Omelette",
+  "item.acollectives.tea": "Tea",
+  "item.acollectives.salt": "Salt",
+  "item.acollectives.butter": "Butter",
+  "item.acollectives.goat_butter": "Goat Butter",
   "item.acollectives.raw_lead": "Raw Lead",
   "item.acollectives.lead_ingot": "Lead Ingot",
   "item.acollectives.ruby": "Ruby",
+  "item.acollectives.unfired_teacup": "Unfired Teacup",
   "item.acollectives.copper_key": "Copper Key",
   "item.acollectives.iron_key": "Iron Key",
   "item.acollectives.gold_key": "Gold Key",
+  "item.acollectives.teacup": "Teacup",
   "item.acollectives.fancy_feather": "Fancy Feather",
   "item.acollectives.crate_key": "Steve Co. Supply Crate Key",
   "item.acollectives.closed_envelope": "Closed Envelope",
@@ -39,6 +46,14 @@
   "item.acollectives.plate_chestplate": "Plate Chestplate",
   "item.acollectives.plate_leggings": "Plate Leggings",
   "item.acollectives.plate_boots": "Plate Boots",
+  "item.acollectives.light_plate_helmet": "Light Plate Helmet",
+  "item.acollectives.light_plate_chestplate": "Light Plate Chestplate",
+
+  "item.acollectives.musket": "Musket",
+  "item.acollectives.blunderbuss": "Blunderbuss",
+  "item.acollectives.flintlock_pistol": "Flintlock Pistol",
+  "item.acollectives.musket_ball": "Musket Ball",
+  "item.acollectives.musket_cartridge": "Musket Cartridge",
 
   "item.acollectives.wooden_battleaxe": "Wooden Battleaxe",
   "item.acollectives.stone_battleaxe": "Stone Battleaxe",
@@ -53,6 +68,7 @@
   "item.acollectives.gold_dagger": "Gold Dagger",
   "item.acollectives.diamond_dagger": "Diamond Dagger",
   "item.acollectives.netherite_dagger": "Netherite Dagger",
+  "item.acollectives.whisk": "Whisk",
 
   "item.acollectives.ancient_sign": "Ancient Sign",
   "item.acollectives.ancient_hanging_sign": "Ancient Hanging Sign",
@@ -78,9 +94,10 @@
   "item.acollectives.music_disc_magnetic_circuit.desc": "Markus 'Notch' Persson - Magnetic Circuit",
 
   "item.acollectives.gold_coin": "Gold Coin",
+  "item.acollectives.gold_coin_bag": "Gold Coin Bag",
   "item.acollectives.developer_note_error": "Developer Note",
   "item.acollectives.developer_note_error.tooltip": "If you are reading this and have obtained this without cheats, the developer is an idiot and needs to fix this glaring issue.",
-  "block.acollectives.ancient_log": "Ancient Log",
+  "block.acollectives.ancient_log": "Ancient Log", 
   "block.acollectives.ancient_wood": "Ancient Wood",
   "block.acollectives.ancient_planks": "Ancient Planks",
   "block.acollectives.ancient_leaves": "Ancient Leaves",
@@ -119,6 +136,15 @@
   "block.acollectives.maustone": "Maustone",
   "block.acollectives.lurstone": "Lurstone",
   "block.acollectives.skystone": "Skystone",
+  "block.acollectives.salt_block": "Block of Salt",
+  "block.acollectives.small_stone_bricks": "Small Stone Bricks",
+  "block.acollectives.small_stone_brick_stairs": "Small Stone Brick Stairs",
+  "block.acollectives.small_stone_brick_slab": "Small Stone Brick Slab",
+  "block.acollectives.small_stone_brick_wall": "Small Stone Brick Wall",
+  "block.acollectives.cracked_small_stone_bricks": "Cracked Small Stone Bricks",
+  "block.acollectives.fragile_small_stone_bricks": "Fragile Small Stone Bricks",
+  "block.acollectives.stone_pillar": "Stone Pillar",
+  "block.acollectives.stone_tiles": "Stone Tiles",
   "block.acollectives.ruby_ore": "Ruby Ore",
   "block.acollectives.lead_ore": "Lead Ore",
   "block.acollectives.deepslate_ruby_ore": "Deepslate Ruby Ore",
@@ -126,6 +152,8 @@
   "block.acollectives.ruby_block": "Block of Ruby",
   "block.acollectives.lead_block": "Block of Lead",
   "block.acollectives.glowing_obsidian": "Glowing Obsidian",
+
+  "block.acollectives.missing_tiles": "Missing Tiles",
 
   "block.acollectives.chocolate_dirt": "Chocolate Dirt",
   "block.acollectives.vanilla_dirt": "Vanilla Dirt",
@@ -233,6 +261,25 @@
   "block.acollectives.cooking_range": "Cooking Range",
   "block.acollectives.coin_pile": "Pile of Gold Coins",
 
+  "block.acollectives.coin_pile_slab": "Small Pile of Gold Coins",
+
+  "block.acollectives.trimmed_red_carpet_left": "Trimmed Red Carpet (Left)",
+  "block.acollectives.trimmed_red_carpet_right": "Trimmed Red Carpet (Right)",
+  "block.acollectives.trimmed_red_carpet_up": "Trimmed Red Carpet (Up)",
+  "block.acollectives.trimmed_red_carpet_down": "Trimmed Red Carpet (Down)",
+  "block.acollectives.trimmed_red_carpet_top_left": "Trimmed Red Carpet (Top Left)",
+  "block.acollectives.trimmed_red_carpet_top_right": "Trimmed Red Carpet (Top Right)",
+  "block.acollectives.trimmed_red_carpet_bottom_left": "Trimmed Red Carpet (Bottom Left)",
+  "block.acollectives.trimmed_red_carpet_bottom_right": "Trimmed Red Carpet (Bottom Right)",
+  "block.acollectives.trimmed_red_carpet_center": "Trimmed Red Carpet (Center)",
+  "block.acollectives.trimmed_red_carpet_u_left": "Trimmed Red Carpet (Left U)",
+  "block.acollectives.trimmed_red_carpet_u_right": "Trimmed Red Carpet (Right U)",
+  "block.acollectives.trimmed_red_carpet_u_up": "Trimmed Red Carpet (Up U)",
+  "block.acollectives.trimmed_red_carpet_u_down": "Trimmed Red Carpet (Down U)",
+  "block.acollectives.trimmed_red_carpet_column_horizontal": "Trimmed Red Carpet (Horizontal Column)",
+  "block.acollectives.trimmed_red_carpet_column_vertical": "Trimmed Red Carpet (Vertical Column)",
+
+
   "block.acollectives.hall_tile": "Hall Tile",
   "block.acollectives.hall_floor": "Hall Floor",
   "block.acollectives.hall_ceiling": "Hall Ceiling",
@@ -243,10 +290,13 @@
   "block.acollectives.green_hall_floor_light": "Green Hall Light",
   "block.acollectives.red_hall_floor_light": "Red Hall Light",
 
+  "block.acollectives.construction_crate": "Construction Crate",
+
   "block.acollectives.unlit_torch": "Unlit Torch",
 
   "block.acollectives.supply_crate": "Steve Co. Supply Crate",
-  "item.acollectives.meat_chunk": "Chunk of Meat",
+  "item.acollectives.wall_meat": "Chunk of Wall Meat",
+  "item.acollectives.dark_candy": "Dark Candy",
 
   "painting.acollectives.mona.title": "Mona",
   "painting.acollectives.mona.author": "Leonardo da Vinci",
@@ -295,11 +345,12 @@
   "painting.acollectives.george.title": "George",
   "painting.acollectives.george.author": "Gilbert Stuart",
 
-  "sounds.acollectives.coin_pile_break": "Coin Pile Break",
-  "sounds.acollectives.coin_pile_step": "Coin Pile Step",
-  "sounds.acollectives.coin_pile_place": "Coin Pile Place",
-  "sounds.acollectives.coin_pile_fall": "Coin Pile Fall",
-  "sounds.acollectives.coin_pile_hit": "Coin Pile Hit",
+  "sounds.acollectives.coin_pile_break": "Block broken",
+  "sounds.acollectives.coin_pile_step": "Footsteps",
+  "sounds.acollectives.coin_pile_place": "Block place",
+  "sounds.acollectives.coin_pile_fall": "Something falls",
+  "sounds.acollectives.coin_pile_hit": "Block breaking",
 
-  "itemgroup.acollectives": "Accumulative Collections"
+  "itemgroup.acollectives": "Accumulative Collections",
+  "itemgroup.test_group": "Test Group"
 }

@@ -27,9 +27,13 @@ public class ModItems {
     public static final Item COOKED_GRAY_COD = registerItem("cooked_gray_cod", new Item(new FabricItemSettings().food(ModFoodComponents.COOKED_GRAY_COD)));
     public static final Item CALAMARI = registerItem("calamari", new Item(new FabricItemSettings().food(ModFoodComponents.CALAMARI)));
     public static final Item FRIED_CALAMARI = registerItem("fried_calamari", new Item(new FabricItemSettings().food(ModFoodComponents.FRIED_CALAMARI)));
-    public static final Item MEAT_CHUNK = registerItem("meat_chunk", new Item(new FabricItemSettings().food(ModFoodComponents.MEAT_CHUNK)));
+    public static final Item WALL_MEAT = registerItem("wall_meat", new Item(new FabricItemSettings().food(ModFoodComponents.WALL_MEAT)));
     public static final Item GRAY_COD_BUCKET = registerItem("gray_cod_bucket", new Item(new FabricItemSettings().maxCount(1)));
     public static final Item MOOSHROOM_BURGER = registerItem("mooshroom_burger", new Item(new FabricItemSettings().food(ModFoodComponents.MOOSHROOM_BURGER)));
+    public static final Item OMELETTE = registerItem("omelette", new Item(new FabricItemSettings().food(ModFoodComponents.OMELETTE)));
+    public static final Item SALT = registerItem("salt", new Item(new FabricItemSettings()));
+    public static final Item BUTTER = registerItem("butter", new Item(new FabricItemSettings()));
+    public static final Item GOAT_BUTTER = registerItem("goat_butter", new Item(new FabricItemSettings()));
     public static final Item FANCY_FEATHER = registerItem("fancy_feather", new Item(new FabricItemSettings()));
     public static final Item RUBY = registerItem("ruby", new Item(new FabricItemSettings()));
     public static final Item LEAD_INGOT = registerItem("lead_ingot", new Item(new FabricItemSettings()));
@@ -42,6 +46,16 @@ public class ModItems {
     public static final Item FILLED_ENVELOPE = registerItem("filled_envelope", new Item(new FabricItemSettings().maxCount(1)));
     public static final Item CLOSED_ENVELOPE = registerItem("closed_envelope", new Item(new FabricItemSettings().maxCount(1)));
     public static final Item ORDER_FORM = registerItem("order_form", new Item(new FabricItemSettings()));
+
+    public static final Item UNFIRED_TEACUP = registerItem("unfired_teacup", new Item(new FabricItemSettings()));
+    public static final Item TEACUP = registerItem("teacup", new Item(new FabricItemSettings()));
+    public static final Item TEA = registerItem("tea", new Item(new FabricItemSettings().food(ModFoodComponents.TEA)));
+
+    public static final Item MUSKET = registerItem("musket", new Item(new FabricItemSettings().maxCount(1)));
+    public static final Item BLUNDERBUSS = registerItem("blunderbuss", new Item(new FabricItemSettings().maxCount(1)));
+    public static final Item FLINTLOCK_PISTOL = registerItem("flintlock_pistol", new Item(new FabricItemSettings().maxCount(1)));
+    public static final Item MUSKET_BALL = registerItem("musket_ball", new Item(new FabricItemSettings()));
+    public static final Item MUSKET_CARTRIDGE = registerItem("musket_cartridge", new Item(new FabricItemSettings()));
 
     public static final Item OBSIDIAN_ARROW = registerItem("obsidian_arrow",
             new ArrowItem(new FabricItemSettings().maxDamage(6)));
@@ -75,6 +89,11 @@ public class ModItems {
     public static final Item PLATE_BOOTS = registerItem("plate_boots",
             new ArmorItem(ModArmorMaterials.PLATE, ArmorItem.Type.BOOTS, new FabricItemSettings()));
 
+    public static final Item LIGHT_PLATE_HELMET = registerItem("light_plate_helmet",
+            new ArmorItem(ModArmorMaterials.LIGHT_PLATE, ArmorItem.Type.HELMET, new FabricItemSettings()));
+    public static final Item LIGHT_PLATE_CHESTPLATE = registerItem("light_plate_chestplate",
+            new ArmorItem(ModArmorMaterials.LIGHT_PLATE, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
+
     public static final Item WOODEN_DAGGER = registerItem("wooden_dagger", new Item(new FabricItemSettings().maxCount(1)));
     public static final Item STONE_DAGGER = registerItem("stone_dagger", new Item(new FabricItemSettings().maxCount(1)));
     public static final Item IRON_DAGGER = registerItem("iron_dagger", new Item(new FabricItemSettings().maxCount(1)));
@@ -88,6 +107,8 @@ public class ModItems {
     public static final Item GOLD_BATTLEAXE = registerItem("gold_battleaxe", new Item(new FabricItemSettings().maxCount(1)));
     public static final Item DIAMOND_BATTLEAXE = registerItem("diamond_battleaxe", new Item(new FabricItemSettings().maxCount(1)));
     public static final Item NETHERITE_BATTLEAXE = registerItem("netherite_battleaxe", new Item(new FabricItemSettings().maxCount(1)));
+
+    public static final Item WHISK = registerItem("whisk", new Item(new FabricItemSettings().maxCount(1)));
 
     /*
     public static final Item ANCIENT_SIGN = registerItem("ancient_sign",
@@ -112,7 +133,10 @@ public class ModItems {
     public static final Item MUSIC_DISC_MAGNETIC_CIRCUIT = registerItem("music_disc_magnetic_circuit",
             new MusicDiscItem(12, ModSounds.MAGNETIC_CIRCUIT, new FabricItemSettings().maxCount(1), 193));
 
+    public static final Item DARK_CANDY = registerItem("dark_candy", new Item(new FabricItemSettings().food(ModFoodComponents.DARK_CANDY)));
+
     public static final Item GOLD_COIN = registerItem("gold_coin", new Item(new FabricItemSettings().maxCount(999)));
+    public static final Item GOLD_COIN_BAG = registerItem("gold_coin_bag", new Item(new FabricItemSettings().maxCount(16)));
     public static final Item DEVELOPER_NOTE_ERROR = registerItem("developer_note_error", new Item(new FabricItemSettings()));
 
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries) {

@@ -5,6 +5,7 @@ import net.bovine.acollectives.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
@@ -34,10 +35,17 @@ public class ModItemGroups {
                         entries.add(ModItems.COOKED_GRAY_COD);
                         entries.add(ModItems.GRAY_COD_BUCKET);
                         entries.add(ModItems.MOOSHROOM_BURGER);
+                        entries.add(ModItems.OMELETTE);
+                        entries.add(ModItems.WALL_MEAT);
+                        entries.add(ModItems.TEA);
+                        entries.add(ModItems.SALT);
+                        entries.add(ModItems.BUTTER);
+                        entries.add(ModItems.GOAT_BUTTER);
                         entries.add(ModItems.FANCY_FEATHER);
                         entries.add(ModItems.RUBY);
                         entries.add(ModItems.RAW_LEAD);
                         entries.add(ModItems.LEAD_INGOT);
+                        entries.add(ModItems.UNFIRED_TEACUP);
 
                         entries.add(ModBlocks.ANCIENT_LOG);
                         entries.add(ModBlocks.ANCIENT_WOOD);
@@ -87,6 +95,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.OLIVE_BUTTON);
                         entries.add(ModBlocks.OLIVE_FENCE);
                         entries.add(ModBlocks.OLIVE_FENCE_GATE);
+                        entries.add(ModBlocks.OLIVE_DOOR);
                         entries.add(ModBlocks.REINFORCED_OAK_LOG);
                         entries.add(ModBlocks.REINFORCED_BIRCH_LOG);
                         entries.add(ModBlocks.REINFORCED_SPRUCE_LOG);
@@ -105,8 +114,16 @@ public class ModItemGroups {
                         entries.add(ModBlocks.REINFORCED_STRIPPED_DARK_OAK_LOG);
                         entries.add(ModBlocks.REINFORCED_STRIPPED_MANGROVE_LOG);
                         entries.add(ModBlocks.REINFORCED_STRIPPED_CHERRY_LOG);
-                        entries.add(ModBlocks.MAUSTONE);
-                        entries.add(ModBlocks.LURSTONE);
+                        //entries.add(ModBlocks.MAUSTONE);
+                        //entries.add(ModBlocks.LURSTONE);
+                        entries.add(ModBlocks.SMALL_STONE_BRICKS);
+                        entries.add(ModBlocks.CRACKED_SMALL_STONE_BRICKS);
+                        entries.add(ModBlocks.SMALL_STONE_BRICK_STAIRS);
+                        entries.add(ModBlocks.SMALL_STONE_BRICK_SLAB);
+                        entries.add(ModBlocks.SMALL_STONE_BRICK_WALL);
+                        entries.add(ModBlocks.FRAGILE_SMALL_STONE_BRICKS);
+                        entries.add(ModBlocks.STONE_PILLAR);
+                        entries.add(ModBlocks.STONE_TILES);
                         entries.add(ModBlocks.LEADED_WHITE_STAINED_GLASS);
                         entries.add(ModBlocks.LEADED_LIGHT_GRAY_STAINED_GLASS);
                         entries.add(ModBlocks.LEADED_GRAY_STAINED_GLASS);
@@ -140,6 +157,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.LEADED_MAGENTA_STAINED_GLASS_PANE);
                         entries.add(ModBlocks.LEADED_PINK_STAINED_GLASS_PANE);
                         entries.add(ModBlocks.SKYSTONE);
+                        entries.add(ModBlocks.SALT_BLOCK);
                         entries.add(ModBlocks.EXPLOSIVE_BARREL);
                         entries.add(ModBlocks.COOKING_RANGE);
                         entries.add(ModBlocks.LEAD_ORE);
@@ -182,7 +200,12 @@ public class ModItemGroups {
                         entries.add(ModItems.COPPER_KEY);
                         entries.add(ModItems.IRON_KEY);
                         entries.add(ModItems.GOLD_KEY);
+                        entries.add(ModItems.MUSKET);
+                        entries.add(ModItems.BLUNDERBUSS);
+                        entries.add(ModItems.FLINTLOCK_PISTOL);
                         entries.add(ModItems.OBSIDIAN_ARROW);
+                        entries.add(ModItems.MUSKET_BALL);
+                        entries.add(ModItems.MUSKET_CARTRIDGE);
                         entries.add(ModItems.WOODEN_BATTLEAXE);
                         entries.add(ModItems.STONE_BATTLEAXE);
                         entries.add(ModItems.IRON_BATTLEAXE);
@@ -203,6 +226,10 @@ public class ModItemGroups {
                         entries.add(ModItems.PLATE_CHESTPLATE);
                         entries.add(ModItems.PLATE_LEGGINGS);
                         entries.add(ModItems.PLATE_BOOTS);
+                        entries.add(ModItems.LIGHT_PLATE_HELMET);
+                        entries.add(ModItems.LIGHT_PLATE_CHESTPLATE);
+                        entries.add(ModItems.WHISK);
+                        entries.add(ModItems.TEACUP);
 
                         entries.add(ModItems.GOLD_AMULET);
                         entries.add(ModItems.GOLD_RING);
@@ -216,7 +243,33 @@ public class ModItemGroups {
                         entries.add(ModItems.MUSIC_DISC_MAGNETIC_CIRCUIT);
 
                         entries.add(ModItems.GOLD_COIN);
+                        entries.add(ModItems.GOLD_COIN_BAG);
                         entries.add(ModBlocks.COIN_PILE);
+
+                        entries.add(ModItems.DARK_CANDY);
+                    }).build());
+    public static final ItemGroup TEST_GROUP = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(AccumulativeCollections.MOD_ID, "test_group"),
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.test_group"))
+                    .icon(() -> new ItemStack(Items.STICK)).entries((displayContext, entries) -> {
+                    entries.add(ModBlocks.COIN_PILE_SLAB);
+                    entries.add(ModBlocks.TRIMMED_RED_CARPET_LEFT);
+                    entries.add(ModBlocks.TRIMMED_RED_CARPET_RIGHT);
+                    entries.add(ModBlocks.TRIMMED_RED_CARPET_UP);
+                    entries.add(ModBlocks.TRIMMED_RED_CARPET_DOWN);
+                    entries.add(ModBlocks.TRIMMED_RED_CARPET_TOP_LEFT);
+                    entries.add(ModBlocks.TRIMMED_RED_CARPET_TOP_RIGHT);
+                    entries.add(ModBlocks.TRIMMED_RED_CARPET_BOTTOM_LEFT);
+                    entries.add(ModBlocks.TRIMMED_RED_CARPET_BOTTOM_RIGHT);
+                    entries.add(ModBlocks.TRIMMED_RED_CARPET_CENTER);
+                    entries.add(ModBlocks.TRIMMED_RED_CARPET_U_LEFT);
+                    entries.add(ModBlocks.TRIMMED_RED_CARPET_U_RIGHT);
+                    entries.add(ModBlocks.TRIMMED_RED_CARPET_U_UP);
+                    entries.add(ModBlocks.TRIMMED_RED_CARPET_U_DOWN);
+                    entries.add(ModBlocks.TRIMMED_RED_CARPET_COLUMN_HORIZONTAL);
+                    entries.add(ModBlocks.TRIMMED_RED_CARPET_COLUMN_VERTICAL);
+
+                    entries.add(ModBlocks.MISSING_TILES);
                     }).build());
 
     public static void registerItemGroups() {

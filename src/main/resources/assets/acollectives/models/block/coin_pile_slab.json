@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "acollectives:block/coin_pile_top",
+    "side": "acollectives:block/coin_pile_side",
+    "top": "acollectives:block/coin_pile_top"
+  }
+}

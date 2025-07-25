@@ -6,6 +6,7 @@ import com.terraformersmc.terraform.sign.block.TerraformWallHangingSignBlock;
 import com.terraformersmc.terraform.sign.block.TerraformWallSignBlock;
 import net.bovine.acollectives.AccumulativeCollections;
 import net.bovine.acollectives.block.custom.BarleyCropBlock;
+import net.bovine.acollectives.block.custom.CookingRangeBlock;
 import net.bovine.acollectives.sound.ModSounds;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -156,11 +157,14 @@ public class ModBlocks {
     public static final Block OLIVE_FENCE_GATE = registerBlock("olive_fence_gate",
             new FenceGateBlock(WoodType.OAK, FabricBlockSettings.copyOf(Blocks.OAK_FENCE_GATE)));
 
+    public static final Block OLIVE_DOOR = registerBlock("olive_door",
+            new DoorBlock(BlockSetType.OAK, FabricBlockSettings.copyOf(Blocks.OAK_DOOR)));
+
     public static final Block BARLEY_CROP = Registry.register(Registries.BLOCK, new Identifier(AccumulativeCollections.MOD_ID, "barley_crop"),
             new BarleyCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
 
     public static final Block TEA_CROP = Registry.register(Registries.BLOCK, new Identifier(AccumulativeCollections.MOD_ID, "tea_crop"),
-            new BarleyCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+            new BarleyCropBlock(FabricBlockSettings.copyOf(Blocks.BEETROOTS)));
 
     public static final Block CHOCOLATE_CAKE = registerBlock("chocolate_cake",
             new CakeBlock(FabricBlockSettings.copyOf(Blocks.CAKE)));
@@ -327,10 +331,34 @@ public class ModBlocks {
     public static final Block LURSTONE = registerBlock("lurstone",
             new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
 
+    public static final Block SMALL_STONE_BRICKS = registerBlock("small_stone_bricks",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block CRACKED_SMALL_STONE_BRICKS = registerBlock("cracked_small_stone_bricks",
+            new Block(FabricBlockSettings.copyOf(Blocks.CRACKED_STONE_BRICKS)));
+    public static final Block FRAGILE_SMALL_STONE_BRICKS = registerBlock("fragile_small_stone_bricks",
+            new Block(FabricBlockSettings.copyOf(Blocks.CRACKED_STONE_BRICKS)));
+    public static final Block STONE_PILLAR = registerBlock("stone_pillar",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.QUARTZ_PILLAR)));
+    public static final Block STONE_TILES = registerBlock("stone_tiles",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+
+    public static final Block SMALL_STONE_BRICK_STAIRS = registerBlock("small_stone_brick_stairs",
+            new StairsBlock(ModBlocks.SMALL_STONE_BRICKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICK_STAIRS)));
+    public static final Block SMALL_STONE_BRICK_SLAB = registerBlock("small_stone_brick_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_SLAB)));
+    public static final Block SMALL_STONE_BRICK_WALL = registerBlock("small_stone_brick_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_WALL)));
+
     public static final Block SKYSTONE = registerBlock("skystone",
-            new Block(FabricBlockSettings.copyOf(Blocks.GLOWSTONE).lightLevel(0)));
+            new Block(FabricBlockSettings.copyOf(Blocks.GLOWSTONE).luminance(0)));
     public static final Block GLOWING_OBSIDIAN = registerBlock("glowing_obsidian",
-            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).lightLevel(12)));
+            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).luminance(12)));
+
+    public static final Block MISSING_TILES = registerBlock("missing_tiles",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
+
+    public static final Block CONSTRUCTION_CRATE = registerBlock("construction_crate",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_WOOD)));
 
     public static final Block EXPLOSIVE_BARREL = registerBlock("explosive_barrel",
             new TntBlock(FabricBlockSettings.copyOf(Blocks.TNT)));
@@ -339,10 +367,46 @@ public class ModBlocks {
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).strength(4f)));
 
     public static final Block COOKING_RANGE = registerBlock("cooking_range",
-            new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
+            new CookingRangeBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
 
     public static final Block COIN_PILE = registerBlock("coin_pile",
             new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK).sounds(ModSounds.COIN_PILE_SOUNDS).breakInstantly()));
+    public static final Block COIN_PILE_SLAB = registerBlock("coin_pile_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK).sounds(ModSounds.COIN_PILE_SOUNDS).breakInstantly()));
+
+    public static final Block SALT_BLOCK = registerBlock("salt_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.SANDSTONE)));
+
+    public static final Block TRIMMED_RED_CARPET_LEFT = registerBlock("trimmed_red_carpet_left",
+            new CarpetBlock(FabricBlockSettings.copyOf(Blocks.RED_CARPET)));
+    public static final Block TRIMMED_RED_CARPET_RIGHT = registerBlock("trimmed_red_carpet_right",
+            new CarpetBlock(FabricBlockSettings.copyOf(Blocks.RED_CARPET)));
+    public static final Block TRIMMED_RED_CARPET_UP = registerBlock("trimmed_red_carpet_up",
+            new CarpetBlock(FabricBlockSettings.copyOf(Blocks.RED_CARPET)));
+    public static final Block TRIMMED_RED_CARPET_DOWN = registerBlock("trimmed_red_carpet_down",
+            new CarpetBlock(FabricBlockSettings.copyOf(Blocks.RED_CARPET)));
+    public static final Block TRIMMED_RED_CARPET_TOP_LEFT = registerBlock("trimmed_red_carpet_top_left",
+            new CarpetBlock(FabricBlockSettings.copyOf(Blocks.RED_CARPET)));
+    public static final Block TRIMMED_RED_CARPET_TOP_RIGHT = registerBlock("trimmed_red_carpet_top_right",
+            new CarpetBlock(FabricBlockSettings.copyOf(Blocks.RED_CARPET)));
+    public static final Block TRIMMED_RED_CARPET_BOTTOM_LEFT = registerBlock("trimmed_red_carpet_bottom_left",
+            new CarpetBlock(FabricBlockSettings.copyOf(Blocks.RED_CARPET)));
+    public static final Block TRIMMED_RED_CARPET_BOTTOM_RIGHT = registerBlock("trimmed_red_carpet_bottom_right",
+            new CarpetBlock(FabricBlockSettings.copyOf(Blocks.RED_CARPET)));
+    public static final Block TRIMMED_RED_CARPET_CENTER = registerBlock("trimmed_red_carpet_center",
+            new CarpetBlock(FabricBlockSettings.copyOf(Blocks.RED_CARPET)));
+    public static final Block TRIMMED_RED_CARPET_U_LEFT = registerBlock("trimmed_red_carpet_u_left",
+            new CarpetBlock(FabricBlockSettings.copyOf(Blocks.RED_CARPET)));
+    public static final Block TRIMMED_RED_CARPET_U_RIGHT = registerBlock("trimmed_red_carpet_u_right",
+            new CarpetBlock(FabricBlockSettings.copyOf(Blocks.RED_CARPET)));
+    public static final Block TRIMMED_RED_CARPET_U_UP = registerBlock("trimmed_red_carpet_u_up",
+            new CarpetBlock(FabricBlockSettings.copyOf(Blocks.RED_CARPET)));
+    public static final Block TRIMMED_RED_CARPET_U_DOWN = registerBlock("trimmed_red_carpet_u_down",
+            new CarpetBlock(FabricBlockSettings.copyOf(Blocks.RED_CARPET)));
+    public static final Block TRIMMED_RED_CARPET_COLUMN_HORIZONTAL = registerBlock("trimmed_red_carpet_column_horizontal",
+            new CarpetBlock(FabricBlockSettings.copyOf(Blocks.RED_CARPET)));
+    public static final Block TRIMMED_RED_CARPET_COLUMN_VERTICAL = registerBlock("trimmed_red_carpet_column_vertical",
+            new CarpetBlock(FabricBlockSettings.copyOf(Blocks.RED_CARPET)));
     /*
     public static final Block UNLIT_TORCH = registerBlock("unlit_torch",
             new TorchBlock(DefaultParticleType smoke, FabricBlockSettings.copyOf(Blocks.WALL_TORCH).lightLevel(0)));
@@ -424,17 +488,17 @@ public class ModBlocks {
     public static final Block HALL_CEILING = registerBlock("hall_ceiling",
             new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
     public static final Block BLUE_HALL_LIGHT = registerBlock("blue_hall_light",
-            new Block(FabricBlockSettings.copyOf(Blocks.SEA_LANTERN).lightLevel(15)));
+            new Block(FabricBlockSettings.copyOf(Blocks.SEA_LANTERN).luminance(15)));
     public static final Block GREEN_HALL_LIGHT = registerBlock("green_hall_light",
-            new Block(FabricBlockSettings.copyOf(Blocks.SEA_LANTERN).lightLevel(15)));
+            new Block(FabricBlockSettings.copyOf(Blocks.SEA_LANTERN).luminance(15)));
     public static final Block RED_HALL_LIGHT = registerBlock("red_hall_light",
-            new Block(FabricBlockSettings.copyOf(Blocks.SEA_LANTERN).lightLevel(15)));
+            new Block(FabricBlockSettings.copyOf(Blocks.SEA_LANTERN).luminance(15)));
     public static final Block BLUE_HALL_FLOOR_LIGHT = registerBlock("blue_hall_floor_light",
-            new Block(FabricBlockSettings.copyOf(Blocks.STONE).lightLevel(15)));
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE).luminance(15)));
     public static final Block GREEN_HALL_FLOOR_LIGHT = registerBlock("green_hall_floor_light",
-            new Block(FabricBlockSettings.copyOf(Blocks.STONE).lightLevel(15)));
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE).luminance(15)));
     public static final Block RED_HALL_FLOOR_LIGHT = registerBlock("red_hall_floor_light",
-            new Block(FabricBlockSettings.copyOf(Blocks.STONE).lightLevel(15)));
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE).luminance(15)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

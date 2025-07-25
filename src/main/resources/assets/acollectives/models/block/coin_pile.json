@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "acollectives:block/coin_pile_top",
+    "side": "acollectives:block/coin_pile_side"
+  }
+}

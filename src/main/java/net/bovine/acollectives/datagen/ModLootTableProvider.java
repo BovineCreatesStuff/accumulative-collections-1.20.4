@@ -25,6 +25,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.LEAD_BLOCK);
         addDrop(ModBlocks.SKYSTONE);
         addDrop(ModBlocks.GLOWING_OBSIDIAN);
+        addDrop(ModBlocks.SMALL_STONE_BRICKS);
+        addDrop(ModBlocks.CRACKED_SMALL_STONE_BRICKS);
 
         addDrop(ModBlocks.ANCIENT_LEAVES, leavesDrops(ModBlocks.ANCIENT_LEAVES, Blocks.SMOOTH_STONE_SLAB, 0.0025f)); //TODO
 
@@ -50,6 +52,32 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.HAUNT_FENCE);
         addDrop(ModBlocks.HAUNT_FENCE_GATE);
 
+        addDrop(ModBlocks.PALM_LOG);
+        addDrop(ModBlocks.PALM_WOOD);
+        addDrop(ModBlocks.STRIPPED_PALM_LOG);
+        addDrop(ModBlocks.STRIPPED_PALM_WOOD);
+        addDrop(ModBlocks.PALM_PLANKS);
+
+        addDrop(ModBlocks.PALM_STAIRS);
+        addDrop(ModBlocks.PALM_SLAB, slabDrops(ModBlocks.PALM_SLAB));
+        addDrop(ModBlocks.PALM_BUTTON);
+        //addDrop(ModBlocks.HAUNT_PRESSURE_PLATE);
+        addDrop(ModBlocks.PALM_FENCE);
+        addDrop(ModBlocks.PALM_FENCE_GATE);
+
+        addDrop(ModBlocks.OLIVE_LOG);
+        addDrop(ModBlocks.OLIVE_WOOD);
+        addDrop(ModBlocks.STRIPPED_OLIVE_LOG);
+        addDrop(ModBlocks.STRIPPED_OLIVE_WOOD);
+        addDrop(ModBlocks.OLIVE_PLANKS);
+
+        addDrop(ModBlocks.OLIVE_STAIRS);
+        addDrop(ModBlocks.OLIVE_SLAB, slabDrops(ModBlocks.OLIVE_SLAB));
+        addDrop(ModBlocks.OLIVE_BUTTON);
+        //addDrop(ModBlocks.HAUNT_PRESSURE_PLATE);
+        addDrop(ModBlocks.OLIVE_FENCE);
+        addDrop(ModBlocks.OLIVE_FENCE_GATE);
+
         addDrop(ModBlocks.CHOCOLATE_DIRT);
         addDrop(ModBlocks.VANILLA_DIRT);
         addDrop(ModBlocks.SUGAR_BRICKS);
@@ -65,6 +93,17 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.YELLOW_ROSE);
         addDrop(ModBlocks.BUTTERCUP);
         addDrop(ModBlocks.PINK_DAISY);
+
+        addDrop(ModBlocks.SMALL_STONE_BRICKS);
+        addDrop(ModBlocks.SMALL_STONE_BRICK_STAIRS);
+        addDrop(ModBlocks.SMALL_STONE_BRICK_SLAB, slabDrops(ModBlocks.SMALL_STONE_BRICK_SLAB));
+        addDrop(ModBlocks.SMALL_STONE_BRICK_WALL);
+        addDrop(ModBlocks.CRACKED_SMALL_STONE_BRICKS);
+        addDrop(ModBlocks.FRAGILE_SMALL_STONE_BRICKS, ModItems.WALL_MEAT);
+
+        addDrop(ModBlocks.SALT_BLOCK);
+
+        //addDrop(ModBlocks.CONSTRUCTION_CRATE);
 
         addDrop(ModBlocks.RUBY_ORE, oreDrops(ModBlocks.RUBY_ORE, ModItems.RUBY));
         addDrop(ModBlocks.LEAD_ORE, oreDrops(ModBlocks.LEAD_ORE, ModItems.RAW_LEAD));

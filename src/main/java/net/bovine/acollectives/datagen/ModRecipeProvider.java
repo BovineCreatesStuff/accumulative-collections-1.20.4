@@ -43,6 +43,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 ModBlocks.LEAD_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.GOLD_COIN, RecipeCategory.DECORATIONS,
                 ModBlocks.COIN_PILE);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.SALT, RecipeCategory.DECORATIONS,
+                ModBlocks.SALT_BLOCK);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.COCOA_BUTTER, 1)
                 .pattern("###")
@@ -50,13 +52,20 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.COCOA_BEANS), conditionsFromItem(Items.COCOA_BEANS))
                 .offerTo(exporter);
 
-
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.OLIVE_OIL_BUCKET, 1)
                 .input(ModItems.OLIVE)
                 .input(ModItems.OLIVE)
                 .input(ModItems.OLIVE)
                 .input(Items.BUCKET)
                 .criterion(hasItem(ModItems.OLIVE), conditionsFromItem(ModItems.OLIVE))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.MUSKET_CARTRIDGE, 1)
+                .input(Items.GUNPOWDER)
+                .input(Items.PAPER)
+                .input(Items.STRING)
+                .input(ModItems.MUSKET_BALL)
+                .criterion(hasItem(Items.GUNPOWDER), conditionsFromItem(Items.GUNPOWDER))
                 .offerTo(exporter);
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CHEESE, 2)

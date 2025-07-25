@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "buildings",
+  "ingredients": [
+    {
+      "item": "acollectives:ancient_wood"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "acollectives:ancient_planks"
+  }
+}
