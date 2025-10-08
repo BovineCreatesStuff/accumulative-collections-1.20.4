@@ -46,6 +46,8 @@ public class ModModelProvider extends FabricModelProvider {
         //blockStateModelGenerator.registerSingleton(ModBlocks.STONE_PILLAR, TexturedModel.CUBE_COLUMN);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STONE_TILES);
 
+        BlockStateModelGenerator.BlockTexturePool cobblestoneBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COBBLESTONE_BRICKS);
+
         blockStateModelGenerator.registerLog(ModBlocks.HAUNT_LOG).log(ModBlocks.HAUNT_LOG).wood(ModBlocks.HAUNT_WOOD);
         blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_HAUNT_LOG).log(ModBlocks.STRIPPED_HAUNT_LOG).wood(ModBlocks.STRIPPED_HAUNT_WOOD);
         BlockStateModelGenerator.BlockTexturePool hauntPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.HAUNT_PLANKS);
@@ -120,6 +122,10 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSingleton(ModBlocks.TRIMMED_RED_CARPET_COLUMN_HORIZONTAL, TexturedModel.CARPET);
         blockStateModelGenerator.registerSingleton(ModBlocks.TRIMMED_RED_CARPET_COLUMN_VERTICAL, TexturedModel.CARPET);
 
+        BlockStateModelGenerator.BlockTexturePool thatchPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.THATCH_BLOCK);
+
+        thatchPool.stairs(ModBlocks.THATCH_STAIRS);
+        thatchPool.slab(ModBlocks.THATCH_SLAB);
 
         //blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHOCOLATE_DIRT);
         //blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.VANILLA_DIRT);
@@ -146,6 +152,10 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.LIME_ROSE, ModBlocks.POTTED_LIME_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.GRAY_ROSE, ModBlocks.POTTED_GRAY_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.LIGHT_BLUE_ROSE, ModBlocks.POTTED_LIGHT_BLUE_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
+
+        blockStateModelGenerator.registerDoubleBlock(ModBlocks.LIGHT_BLUE_ROSE_BUSH, BlockStateModelGenerator.TintType.NOT_TINTED);
+
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.ANCIENT_SAPLING, ModBlocks.POTTED_ANCIENT_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
 
         blockStateModelGenerator.registerGlassPane(ModBlocks.LEADED_BLACK_STAINED_GLASS, ModBlocks.LEADED_BLACK_STAINED_GLASS_PANE);
         blockStateModelGenerator.registerGlassPane(ModBlocks.LEADED_BLUE_STAINED_GLASS, ModBlocks.LEADED_BLUE_STAINED_GLASS_PANE);

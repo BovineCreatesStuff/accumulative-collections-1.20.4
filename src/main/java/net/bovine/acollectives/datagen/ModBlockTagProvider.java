@@ -76,6 +76,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.PLANKS)
                 .add(ModBlocks.ANCIENT_PLANKS)
+                .add(ModBlocks.PALM_PLANKS)
+                .add(ModBlocks.OLIVE_PLANKS)
                 .add(ModBlocks.HAUNT_PLANKS);
+
+        getOrCreateTagBuilder(BlockTags.LOGS)
+                .add(ModBlocks.ANCIENT_LOG)
+                .add(ModBlocks.PALM_LOG)
+                .add(ModBlocks.OLIVE_LOG)
+                .add(ModBlocks.HAUNT_LOG);
     }
 }

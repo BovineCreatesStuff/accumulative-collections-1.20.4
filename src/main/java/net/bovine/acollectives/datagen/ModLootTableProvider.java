@@ -28,7 +28,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.SMALL_STONE_BRICKS);
         addDrop(ModBlocks.CRACKED_SMALL_STONE_BRICKS);
 
-        addDrop(ModBlocks.ANCIENT_LEAVES, leavesDrops(ModBlocks.ANCIENT_LEAVES, Blocks.SMOOTH_STONE_SLAB, 0.0025f)); //TODO
+        addDrop(ModBlocks.ANCIENT_SAPLING);
+        addDrop(ModBlocks.ANCIENT_LEAVES, leavesDrops(ModBlocks.ANCIENT_LEAVES, ModBlocks.ANCIENT_SAPLING, 0.0025f)); //TODO
 
         addDrop(ModBlocks.ANCIENT_STAIRS);
         addDrop(ModBlocks.ANCIENT_SLAB, slabDrops(ModBlocks.ANCIENT_SLAB));

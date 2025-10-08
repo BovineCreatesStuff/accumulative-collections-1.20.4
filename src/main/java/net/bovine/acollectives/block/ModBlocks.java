@@ -1,21 +1,15 @@
 package net.bovine.acollectives.block;
 
-import com.terraformersmc.terraform.sign.block.TerraformHangingSignBlock;
-import com.terraformersmc.terraform.sign.block.TerraformSignBlock;
-import com.terraformersmc.terraform.sign.block.TerraformWallHangingSignBlock;
-import com.terraformersmc.terraform.sign.block.TerraformWallSignBlock;
 import net.bovine.acollectives.AccumulativeCollections;
 import net.bovine.acollectives.block.custom.BarleyCropBlock;
-import net.bovine.acollectives.block.custom.CookingRangeBlock;
+//import net.bovine.acollectives.block.custom.CookingRangeBlock;
 import net.bovine.acollectives.sound.ModSounds;
+import net.bovine.acollectives.world.tree.ModSaplingGenerators;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
-import net.minecraft.data.family.BlockFamilies;
-import net.minecraft.data.family.BlockFamily;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
-import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
@@ -54,6 +48,12 @@ public class ModBlocks {
             new DoorBlock(BlockSetType.OAK, FabricBlockSettings.copyOf(Blocks.OAK_DOOR)));
     public static final Block ANCIENT_TRAPDOOR = registerBlock("ancient_trapdoor",
             new TrapdoorBlock(BlockSetType.OAK, FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR)));
+
+    public static final Block ANCIENT_SAPLING = registerBlock("ancient_sapling",
+            new SaplingBlock(ModSaplingGenerators.ANCIENT, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+
+    public static final Block POTTED_ANCIENT_SAPLING = registerBlock("potted_ancient_sapling",
+            new FlowerPotBlock(ANCIENT_SAPLING, FabricBlockSettings.copyOf(Blocks.POTTED_OAK_SAPLING).nonOpaque()));
 
     //public static final BlockSetType ANCIENT = BlockSetType.register(new BlockSetType("ancient"));
     //public static final WoodType ANCIENTWOODTYPE = WoodType.register(new WoodType("ancientwoodtype", BlockSetType.ANCIENT));
@@ -260,6 +260,9 @@ public class ModBlocks {
     public static final Block POTTED_LIGHT_BLUE_ROSE = registerBlock("potted_light_blue_rose",
             new FlowerPotBlock(LIGHT_BLUE_ROSE, FabricBlockSettings.copyOf(Blocks.POTTED_BLUE_ORCHID).nonOpaque()));
 
+    public static final Block LIGHT_BLUE_ROSE_BUSH = registerBlock("light_blue_rose_bush",
+            new TallFlowerBlock(FabricBlockSettings.copyOf(Blocks.ROSE_BUSH).nonOpaque().noCollision()));
+
     public static final Block REINFORCED_OAK_LOG = registerBlock("reinforced_oak_log",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(6f)));
     public static final Block REINFORCED_BIRCH_LOG = registerBlock("reinforced_birch_log",
@@ -326,6 +329,14 @@ public class ModBlocks {
     public static final Block DEEPSLATE_LEAD_ORE = registerBlock("deepslate_lead_ore",
             new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_IRON_ORE)));
 
+    public static final Block THATCH_BLOCK = registerBlock("thatch_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.HAY_BLOCK).sounds(BlockSoundGroup.GRASS)));
+
+    public static final Block THATCH_STAIRS = registerBlock("thatch_stairs",
+            new StairsBlock(ModBlocks.THATCH_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_STAIRS).sounds(BlockSoundGroup.GRASS)));
+    public static final Block THATCH_SLAB = registerBlock("thatch_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).sounds(BlockSoundGroup.GRASS)));
+
     public static final Block MAUSTONE = registerBlock("maustone",
             new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
     public static final Block LURSTONE = registerBlock("lurstone",
@@ -340,6 +351,9 @@ public class ModBlocks {
     public static final Block STONE_PILLAR = registerBlock("stone_pillar",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.QUARTZ_PILLAR)));
     public static final Block STONE_TILES = registerBlock("stone_tiles",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+
+    public static final Block COBBLESTONE_BRICKS = registerBlock("cobblestone_bricks",
             new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
 
     public static final Block SMALL_STONE_BRICK_STAIRS = registerBlock("small_stone_brick_stairs",
@@ -366,8 +380,13 @@ public class ModBlocks {
     public static final Block SUPPLY_CRATE = registerBlock("supply_crate",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).strength(4f)));
 
+    /*
     public static final Block COOKING_RANGE = registerBlock("cooking_range",
             new CookingRangeBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+     */
+
+    public static final Block COOKING_RANGE = registerBlock("cooking_range",
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
 
     public static final Block COIN_PILE = registerBlock("coin_pile",
             new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK).sounds(ModSounds.COIN_PILE_SOUNDS).breakInstantly()));

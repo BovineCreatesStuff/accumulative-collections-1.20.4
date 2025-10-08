@@ -145,6 +145,7 @@
   "block.acollectives.fragile_small_stone_bricks": "Fragile Small Stone Bricks",
   "block.acollectives.stone_pillar": "Stone Pillar",
   "block.acollectives.stone_tiles": "Stone Tiles",
+  "block.acollectives.cobblestone_bricks": "Cobblestone Bricks",
   "block.acollectives.ruby_ore": "Ruby Ore",
   "block.acollectives.lead_ore": "Lead Ore",
   "block.acollectives.deepslate_ruby_ore": "Deepslate Ruby Ore",
@@ -204,6 +205,10 @@
   "block.acollectives.olive_door": "Olive Door",
   "block.acollectives.olive_trapdoor": "Olive Trapdoor",
 
+  "block.acollectives.thatch_block": "Thatch",
+  "block.acollectives.thatch_stairs": "Thatch Stairs",
+  "block.acollectives.thatch_slab": "Thatch Slab",
+
   "block.acollectives.red_rose": "Red Rose",
   "block.acollectives.cyan_rose": "Cyan Rose",
   "block.acollectives.white_rose": "White Rose",
@@ -222,6 +227,10 @@
   "block.acollectives.lime_rose": "Lime Rose",
   "block.acollectives.gray_rose": "Gray Rose",
   "block.acollectives.light_blue_rose": "Light Blue Rose",
+
+  "block.acollectives.light_blue_rose_bush": "Light Blue Rose Bush",
+
+  "block.acollectives.ancient_sapling": "Ancient Sapling",
 
   "block.acollectives.leaded_black_stained_glass": "Leaded Black Stained Glass",
   "block.acollectives.leaded_blue_stained_glass": "Leaded Blue Stained Glass",

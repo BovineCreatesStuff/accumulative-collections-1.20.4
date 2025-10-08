@@ -116,6 +116,9 @@ public class ModItemGroups {
                         entries.add(ModBlocks.REINFORCED_STRIPPED_CHERRY_LOG);
                         //entries.add(ModBlocks.MAUSTONE);
                         //entries.add(ModBlocks.LURSTONE);
+                        entries.add(ModBlocks.THATCH_BLOCK);
+                        entries.add(ModBlocks.THATCH_STAIRS);
+                        entries.add(ModBlocks.THATCH_SLAB);
                         entries.add(ModBlocks.SMALL_STONE_BRICKS);
                         entries.add(ModBlocks.CRACKED_SMALL_STONE_BRICKS);
                         entries.add(ModBlocks.SMALL_STONE_BRICK_STAIRS);
@@ -124,6 +127,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.FRAGILE_SMALL_STONE_BRICKS);
                         entries.add(ModBlocks.STONE_PILLAR);
                         entries.add(ModBlocks.STONE_TILES);
+                        entries.add(ModBlocks.COBBLESTONE_BRICKS);
                         entries.add(ModBlocks.LEADED_WHITE_STAINED_GLASS);
                         entries.add(ModBlocks.LEADED_LIGHT_GRAY_STAINED_GLASS);
                         entries.add(ModBlocks.LEADED_GRAY_STAINED_GLASS);
@@ -196,6 +200,10 @@ public class ModItemGroups {
                         entries.add(ModBlocks.PINK_ROSE);
                         entries.add(ModBlocks.BUTTERCUP);
                         entries.add(ModBlocks.PINK_DAISY);
+
+                        entries.add(ModBlocks.LIGHT_BLUE_ROSE_BUSH);
+
+                        entries.add(ModBlocks.ANCIENT_SAPLING);
 
                         entries.add(ModItems.COPPER_KEY);
                         entries.add(ModItems.IRON_KEY);
