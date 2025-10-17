@@ -272,7 +272,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.MUSIC_DISC_DOG, Models.GENERATED);
         itemModelGenerator.register(ModItems.MUSIC_DISC_DROOPY, Models.GENERATED);
         itemModelGenerator.register(ModItems.MUSIC_DISC_ELEVEN, Models.GENERATED);
-        itemModelGenerator.register(ModItems.MUSIC_DISC_FOOLIN, Models.GENERATED);
         itemModelGenerator.register(ModItems.MUSIC_DISC_INTRO, Models.GENERATED);
         itemModelGenerator.register(ModItems.MUSIC_DISC_MAGNETIC_CIRCUIT, Models.GENERATED);
 
@@ -287,7 +286,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ORDER_FORM, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.WALL_MEAT, Models.GENERATED);
-        itemModelGenerator.register(ModItems.DARK_CANDY, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SANDVICH, Models.GENERATED);
 
         //itemModelGenerator.register(ModItems.ANCIENT_HANGING_SIGN, Models.GENERATED);
     }

@@ -65,21 +65,13 @@
       {
         "name": "acollectives:droopy",
         "stream": true
-      },
+      }
     ]
   },
   "eleven": {
       "sounds": [
         {
           "name": "acollectives:eleven",
-          "stream": true
-        }
-      ]
-    },
-    "foolin": {
-      "sounds": [
-        {
-          "name": "acollectives:foolin",
           "stream": true
         }
       ]

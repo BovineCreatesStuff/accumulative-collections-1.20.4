@@ -32,8 +32,8 @@ public class ModFoodComponents {
     public static final FoodComponent OMELETTE = new FoodComponent.Builder().hunger(9).saturationModifier(0.75f)
             .build();
     public static final FoodComponent TEA = new FoodComponent.Builder().hunger(4).saturationModifier(0.50f)
-            .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 300, 1), 1f).build();
+            .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 3000, 1), 1f).build();
+    public static final FoodComponent SANDVICH = new FoodComponent.Builder().hunger(8).saturationModifier(1.0f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 80, 2), 1f).build();
 
-    public static final FoodComponent DARK_CANDY = new FoodComponent.Builder().hunger(5).saturationModifier(0.5f)
-            .build();
 }

@@ -133,17 +133,14 @@ public class ModItems {
     public static final Item MUSIC_DISC_MAGNETIC_CIRCUIT = registerItem("music_disc_magnetic_circuit",
             new MusicDiscItem(12, ModSounds.MAGNETIC_CIRCUIT, new FabricItemSettings().maxCount(1), 193));
 
-    public static final Item DARK_CANDY = registerItem("dark_candy", new Item(new FabricItemSettings().food(ModFoodComponents.DARK_CANDY)));
-
     public static final Item GOLD_COIN = registerItem("gold_coin", new Item(new FabricItemSettings().maxCount(999)));
     public static final Item GOLD_COIN_BAG = registerItem("gold_coin_bag", new Item(new FabricItemSettings().maxCount(16)));
     public static final Item DEVELOPER_NOTE_ERROR = registerItem("developer_note_error", new Item(new FabricItemSettings()));
 
+    public static final Item SANDVICH = registerItem("sandvich", new Item(new FabricItemSettings().food(ModFoodComponents.SANDVICH)));
+
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries) {
-        entries.add(COCOA_BUTTER);
-        entries.add(RUBY);
-        entries.add(LEAD_INGOT);
-        entries.add(RAW_LEAD);
+
     }
 
     private static Item registerItem(String name, Item item) {

@@ -37,6 +37,7 @@ public class ModItemGroups {
                         entries.add(ModItems.MOOSHROOM_BURGER);
                         entries.add(ModItems.OMELETTE);
                         entries.add(ModItems.WALL_MEAT);
+                        entries.add(ModItems.SANDVICH);
                         entries.add(ModItems.TEA);
                         entries.add(ModItems.SALT);
                         entries.add(ModItems.BUTTER);
@@ -246,15 +247,12 @@ public class ModItemGroups {
                         entries.add(ModItems.MUSIC_DISC_DOG);
                         entries.add(ModItems.MUSIC_DISC_DROOPY);
                         entries.add(ModItems.MUSIC_DISC_ELEVEN);
-                        entries.add(ModItems.MUSIC_DISC_FOOLIN);
                         entries.add(ModItems.MUSIC_DISC_INTRO);
                         entries.add(ModItems.MUSIC_DISC_MAGNETIC_CIRCUIT);
 
                         entries.add(ModItems.GOLD_COIN);
                         entries.add(ModItems.GOLD_COIN_BAG);
                         entries.add(ModBlocks.COIN_PILE);
-
-                        entries.add(ModItems.DARK_CANDY);
                     }).build());
     public static final ItemGroup TEST_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(AccumulativeCollections.MOD_ID, "test_group"),

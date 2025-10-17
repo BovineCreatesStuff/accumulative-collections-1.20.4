@@ -23,7 +23,6 @@ public class ModSounds {
     public static final SoundEvent DOG = registerSound("dog");
     public static final SoundEvent DROOPY = registerSound("droopy");
     public static final SoundEvent ELEVEN = registerSound("eleven");
-    public static final SoundEvent FOOLIN = registerSound("foolin");
     public static final SoundEvent INTRO = registerSound("intro");
     public static final SoundEvent MAGNETIC_CIRCUIT = registerSound("magnetic_circuit");
 

@@ -23,7 +23,6 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.MUSIC_DISC_DOG)
                 .add(ModItems.MUSIC_DISC_DROOPY)
                 .add(ModItems.MUSIC_DISC_ELEVEN)
-                .add(ModItems.MUSIC_DISC_FOOLIN)
                 .add(ModItems.MUSIC_DISC_INTRO)
                 .add(ModItems.MUSIC_DISC_MAGNETIC_CIRCUIT);
 
@@ -32,7 +31,6 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.MUSIC_DISC_DOG)
                 .add(ModItems.MUSIC_DISC_DROOPY)
                 .add(ModItems.MUSIC_DISC_ELEVEN)
-                .add(ModItems.MUSIC_DISC_FOOLIN)
                 .add(ModItems.MUSIC_DISC_INTRO)
                 .add(ModItems.MUSIC_DISC_MAGNETIC_CIRCUIT);
 
