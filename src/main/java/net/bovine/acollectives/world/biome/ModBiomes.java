@@ -61,7 +61,7 @@ public class ModBiomes {
                         .waterColor(0x1f55ff)
                         .waterFogColor(0x051a5d)
                         .skyColor(0x78A7FF)
-                        .grassColor(0xafff5e)
+                        .grassColor(0xffffff)
                         .foliageColor(0x62ff40)
                         .fogColor(0xffffff)
                         .moodSound(BiomeMoodSound.CAVE)

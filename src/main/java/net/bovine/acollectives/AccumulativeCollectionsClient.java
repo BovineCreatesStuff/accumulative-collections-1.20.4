@@ -4,6 +4,7 @@ import com.terraformersmc.terraform.sign.SpriteIdentifierRegistry;
 import net.bovine.acollectives.block.ModBlocks;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.TexturedRenderLayers;
 import net.minecraft.client.util.SpriteIdentifier;
@@ -55,6 +56,8 @@ public class AccumulativeCollectionsClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_LIGHT_BLUE_ROSE, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LIGHT_BLUE_ROSE_BUSH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLUE_ROSE_BUSH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WHITE_ROSE_BUSH, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ANCIENT_SAPLING, RenderLayer.getCutout());
 
@@ -91,6 +94,8 @@ public class AccumulativeCollectionsClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LEADED_RED_STAINED_GLASS_PANE, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LEADED_WHITE_STAINED_GLASS_PANE, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LEADED_YELLOW_STAINED_GLASS_PANE, RenderLayer.getTranslucent());
+
+        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> 0x62ff40, ModBlocks.ANCIENT_LEAVES);
 
         /*
         SpriteIdentifierRegistry.INSTANCE.addIdentifier(new SpriteIdentifier(TexturedRenderLayers.SIGNS_ATLAS_TEXTURE, ModBlocks.ANCIENT_SIGN_TEXTURE));

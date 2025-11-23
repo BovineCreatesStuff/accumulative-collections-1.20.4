@@ -262,6 +262,10 @@ public class ModBlocks {
 
     public static final Block LIGHT_BLUE_ROSE_BUSH = registerBlock("light_blue_rose_bush",
             new TallFlowerBlock(FabricBlockSettings.copyOf(Blocks.ROSE_BUSH).nonOpaque().noCollision()));
+    public static final Block BLUE_ROSE_BUSH = registerBlock("blue_rose_bush",
+            new TallFlowerBlock(FabricBlockSettings.copyOf(Blocks.ROSE_BUSH).nonOpaque().noCollision()));
+    public static final Block WHITE_ROSE_BUSH = registerBlock("white_rose_bush",
+            new TallFlowerBlock(FabricBlockSettings.copyOf(Blocks.ROSE_BUSH).nonOpaque().noCollision()));
 
     public static final Block REINFORCED_OAK_LOG = registerBlock("reinforced_oak_log",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(6f)));

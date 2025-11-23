@@ -48,7 +48,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.STRIPPED_HAUNT_WOOD.asItem());
 
         getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
-                .add(ModItems.STUDDED_HELMET, ModItems.STUDDED_CHESTPLATE, ModItems.STUDDED_LEGGINGS, ModItems.STUDDED_BOOTS);
+                .add(ModItems.STUDDED_HELMET, ModItems.STUDDED_CHESTPLATE, ModItems.STUDDED_LEGGINGS, ModItems.STUDDED_BOOTS)
+                .add(ModItems.PLATE_HELMET, ModItems.PLATE_CHESTPLATE, ModItems.PLATE_LEGGINGS, ModItems.PLATE_BOOTS);
 
         getOrCreateTagBuilder(ItemTags.FISHES)
                 .add(ModItems.GRAY_COD, ModItems.COOKED_GRAY_COD);
