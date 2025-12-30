@@ -85,5 +85,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.PALM_LOG)
                 .add(ModBlocks.OLIVE_LOG)
                 .add(ModBlocks.HAUNT_LOG);
+
+        getOrCreateTagBuilder(BlockTags.INFINIBURN_OVERWORLD)
+                .add(ModBlocks.CHARRED_GRASS_BLOCK);
     }
 }

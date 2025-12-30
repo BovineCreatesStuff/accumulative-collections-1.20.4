@@ -202,7 +202,9 @@ public class ModItemGroups {
                         entries.add(ModBlocks.BUTTERCUP);
                         entries.add(ModBlocks.PINK_DAISY);
 
+                        entries.add(ModBlocks.WHITE_ROSE_BUSH);
                         entries.add(ModBlocks.LIGHT_BLUE_ROSE_BUSH);
+                        entries.add(ModBlocks.BLUE_ROSE_BUSH);
 
                         entries.add(ModBlocks.ANCIENT_SAPLING);
 

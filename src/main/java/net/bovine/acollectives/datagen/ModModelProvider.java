@@ -28,7 +28,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerLog(ModBlocks.ANCIENT_LOG).log(ModBlocks.ANCIENT_LOG).wood(ModBlocks.ANCIENT_WOOD);
         blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_ANCIENT_LOG).log(ModBlocks.STRIPPED_ANCIENT_LOG).wood(ModBlocks.STRIPPED_ANCIENT_WOOD);
         BlockStateModelGenerator.BlockTexturePool ancientPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ANCIENT_PLANKS);
-        //blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ANCIENT_LEAVES);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ANCIENT_LEAVES);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.OLIVE_LEAVES);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SKYSTONE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SALT_BLOCK);
@@ -129,6 +129,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         //blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHOCOLATE_DIRT);
         //blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.VANILLA_DIRT);
+        blockStateModelGenerator.registerSingleton(ModBlocks.CHARRED_GRASS_BLOCK, TexturedModel.CUBE_BOTTOM_TOP);
 
         blockStateModelGenerator.registerCrop(ModBlocks.BARLEY_CROP, BarleyCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7);
 

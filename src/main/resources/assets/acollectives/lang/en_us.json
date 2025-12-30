@@ -131,6 +131,7 @@
   "block.acollectives.reinforced_stripped_dark_oak_log": "Reinforced Stripped Dark Oak Log",
   "block.acollectives.reinforced_stripped_mangrove_log": "Reinforced Stripped Mangrove Log",
   "block.acollectives.reinforced_stripped_cherry_log": "Reinforced Stripped Cherry Log",
+  "block.acollectives.charred_grass_block": "Charred Grass",
   "block.acollectives.maustone": "Maustone",
   "block.acollectives.lurstone": "Lurstone",
   "block.acollectives.skystone": "Skystone",
@@ -227,6 +228,8 @@
   "block.acollectives.light_blue_rose": "Light Blue Rose",
 
   "block.acollectives.light_blue_rose_bush": "Light Blue Rose Bush",
+  "block.acollectives.blue_rose_bush": "Blue Rose Bush",
+  "block.acollectives.white_rose_bush": "White Rose Bush",
 
   "block.acollectives.ancient_sapling": "Ancient Sapling",
 
