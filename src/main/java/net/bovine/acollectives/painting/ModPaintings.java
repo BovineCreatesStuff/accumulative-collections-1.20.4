@@ -25,6 +25,16 @@ public class ModPaintings {
     public static final PaintingVariant FIELD = registerPainting("field", new PaintingVariant(64, 64));
     public static final PaintingVariant GEORGE = registerPainting("george", new PaintingVariant(16, 16));
     public static final PaintingVariant FORT = registerPainting("fort", new PaintingVariant(32, 64));
+    public static final PaintingVariant SUNKEN = registerPainting("sunken", new PaintingVariant(32, 32));
+    public static final PaintingVariant STILL = registerPainting("still", new PaintingVariant(16, 16));
+    public static final PaintingVariant GARDEN = registerPainting("garden", new PaintingVariant(32, 16));
+    public static final PaintingVariant POKER = registerPainting("poker", new PaintingVariant(32, 16));
+    public static final PaintingVariant KISS = registerPainting("kiss", new PaintingVariant(32, 32));
+    public static final PaintingVariant SHALOTT = registerPainting("shalott", new PaintingVariant(64, 64));
+    public static final PaintingVariant MOTHER = registerPainting("mother", new PaintingVariant(16, 16));
+    public static final PaintingVariant SUNFLOWERS = registerPainting("sunflowers", new PaintingVariant(32, 32));
+    public static final PaintingVariant VEGAS = registerPainting("vegas", new PaintingVariant(16, 32));
+    public static final PaintingVariant PAINHOUSE = registerPainting("painhouse", new PaintingVariant(32, 64));
 
     private static PaintingVariant registerPainting(String name, PaintingVariant paintingVariant) {
         return Registry.register(Registries.PAINTING_VARIANT, new Identifier(AccumulativeCollections.MOD_ID, name ), paintingVariant);

@@ -96,6 +96,7 @@ public class AccumulativeCollectionsClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LEADED_YELLOW_STAINED_GLASS_PANE, RenderLayer.getTranslucent());
 
         ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> 0x62ff40, ModBlocks.ANCIENT_LEAVES);
+        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> 0xbfbb52, ModBlocks.OLIVE_LEAVES);
 
         /*
         SpriteIdentifierRegistry.INSTANCE.addIdentifier(new SpriteIdentifier(TexturedRenderLayers.SIGNS_ATLAS_TEXTURE, ModBlocks.ANCIENT_SIGN_TEXTURE));

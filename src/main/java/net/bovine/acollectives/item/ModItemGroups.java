@@ -48,6 +48,7 @@ public class ModItemGroups {
                         entries.add(ModItems.LEAD_INGOT);
                         entries.add(ModItems.UNFIRED_TEACUP);
 
+                        entries.add(ModBlocks.CHARRED_GRASS_BLOCK);
                         entries.add(ModBlocks.ANCIENT_LOG);
                         entries.add(ModBlocks.ANCIENT_WOOD);
                         entries.add(ModBlocks.ANCIENT_LEAVES);

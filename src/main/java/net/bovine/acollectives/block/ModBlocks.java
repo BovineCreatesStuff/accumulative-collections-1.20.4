@@ -440,7 +440,7 @@ public class ModBlocks {
      */
 
     public static final Block CHARRED_GRASS_BLOCK = registerBlock("charred_grass_block",
-            new PillarBlock(FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK)));
+            new Block(FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK)));
 
     public static final Block LEADED_BLACK_STAINED_GLASS = registerBlock("leaded_black_stained_glass",
             new Block(FabricBlockSettings.copyOf(Blocks.BLACK_STAINED_GLASS)));
